@@ -11,28 +11,32 @@ import NotFound from "./pages/NotFound";
 import EventDetail from "./pages/EventDetail";
 import KnowledgeDetail from "./pages/KnowledgeDetail";
 import KnowledgeCatalog from "./pages/KnowledgeCatalog";
+import { useState } from "react";
 
-const queryClient = new QueryClient();
+const App = () => {
+  // Create a client instance that persists across renders
+  const [queryClient] = useState(() => new QueryClient());
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/knowledge" element={<Knowledge />} />
-          <Route path="/knowledge/catalog" element={<KnowledgeCatalog />} />
-          <Route path="/knowledge/:id" element={<KnowledgeDetail />} />
-          <Route path="/events" element={<Events />} />
-          <Route path="/events/:id" element={<EventDetail />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+  return (
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/knowledge" element={<Knowledge />} />
+            <Route path="/knowledge/catalog" element={<KnowledgeCatalog />} />
+            <Route path="/knowledge/:id" element={<KnowledgeDetail />} />
+            <Route path="/events" element={<Events />} />
+            <Route path="/events/:id" element={<EventDetail />} />
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+      </TooltipProvider>
+    </QueryClientProvider>
+  );
+};
 
 export default App;
