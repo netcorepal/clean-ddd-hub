@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 const KnowledgeBaseSection = ({ limit = 0 }) => {
   const resources = [
     {
+      id: "strategic-ddd",
       title: "Strategic Domain-Driven Design",
       description: "Learn how to identify bounded contexts, create context maps, and implement domain models that represent business reality.",
       icon: <Book className="h-5 w-5 text-ddd-600" />,
@@ -14,6 +15,7 @@ const KnowledgeBaseSection = ({ limit = 0 }) => {
       link: "/knowledge/strategic-ddd"
     },
     {
+      id: "tactical-patterns",
       title: "Tactical Patterns in DDD",
       description: "Explore entities, value objects, aggregates, and domain events for implementing robust domain models.",
       icon: <BookOpen className="h-5 w-5 text-ddd-600" />,
@@ -21,6 +23,7 @@ const KnowledgeBaseSection = ({ limit = 0 }) => {
       link: "/knowledge/tactical-patterns"
     },
     {
+      id: "clean-architecture",
       title: "Clean Architecture Integration",
       description: "Combine DDD with Clean Architecture to create maintainable and testable systems with clear separation of concerns.",
       icon: <FileText className="h-5 w-5 text-ddd-600" />,
@@ -28,6 +31,7 @@ const KnowledgeBaseSection = ({ limit = 0 }) => {
       link: "/knowledge/clean-architecture"
     },
     {
+      id: "event-storming",
       title: "Event Storming Workshops",
       description: "Collaborative modeling technique for mapping business processes and identifying domain events.",
       icon: <Users className="h-5 w-5 text-ddd-600" />,
@@ -66,7 +70,7 @@ const KnowledgeBaseSection = ({ limit = 0 }) => {
               <CardFooter>
                 <Button variant="ghost" className="text-ddd-600 p-0 hover:text-ddd-800 hover:bg-transparent" asChild>
                   <Link to={resource.link}>
-                    Read more
+                    Read article
                   </Link>
                 </Button>
               </CardFooter>
@@ -77,7 +81,7 @@ const KnowledgeBaseSection = ({ limit = 0 }) => {
         {limit > 0 && (
           <div className="text-center mt-10">
             <Button variant="outline" asChild>
-              <Link to="/knowledge">View All Resources</Link>
+              <Link to="/knowledge/catalog">Browse All Articles</Link>
             </Button>
           </div>
         )}

@@ -5,6 +5,7 @@ import KnowledgeBaseSection from "@/components/KnowledgeBaseSection";
 import { BookOpen, Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Knowledge = () => {
   return (
@@ -29,7 +30,9 @@ const Knowledge = () => {
                     className="pl-10 pr-4 py-2 w-full rounded-l-md"
                   />
                 </div>
-                <Button className="rounded-l-none">Search</Button>
+                <Button className="rounded-l-none" asChild>
+                  <Link to="/knowledge/catalog">Search</Link>
+                </Button>
               </div>
             </div>
           </div>
@@ -51,9 +54,15 @@ const Knowledge = () => {
                     Techniques for creating effective domain models that capture business complexity.
                   </p>
                   <ul className="space-y-2 text-ddd-600">
-                    <li className="hover:underline cursor-pointer">• Entities vs Value Objects</li>
-                    <li className="hover:underline cursor-pointer">• Aggregates and Boundaries</li>
-                    <li className="hover:underline cursor-pointer">• Domain Events</li>
+                    <li className="hover:underline cursor-pointer">
+                      <Link to="/knowledge/tactical-patterns">• Entities vs Value Objects</Link>
+                    </li>
+                    <li className="hover:underline cursor-pointer">
+                      <Link to="/knowledge/tactical-patterns">• Aggregates and Boundaries</Link>
+                    </li>
+                    <li className="hover:underline cursor-pointer">
+                      <Link to="/knowledge/tactical-patterns">• Domain Events</Link>
+                    </li>
                   </ul>
                 </div>
                 
@@ -63,11 +72,23 @@ const Knowledge = () => {
                     Building maintainable systems with clear separation of concerns.
                   </p>
                   <ul className="space-y-2 text-ddd-600">
-                    <li className="hover:underline cursor-pointer">• Architectural Boundaries</li>
-                    <li className="hover:underline cursor-pointer">• Use Cases and Application Services</li>
-                    <li className="hover:underline cursor-pointer">• Dependency Rule</li>
+                    <li className="hover:underline cursor-pointer">
+                      <Link to="/knowledge/clean-architecture">• Architectural Boundaries</Link>
+                    </li>
+                    <li className="hover:underline cursor-pointer">
+                      <Link to="/knowledge/clean-architecture">• Use Cases and Application Services</Link>
+                    </li>
+                    <li className="hover:underline cursor-pointer">
+                      <Link to="/knowledge/clean-architecture">• Dependency Rule</Link>
+                    </li>
                   </ul>
                 </div>
+              </div>
+              
+              <div className="text-center mt-10">
+                <Button asChild>
+                  <Link to="/knowledge/catalog">Browse Full Catalog</Link>
+                </Button>
               </div>
             </div>
           </div>

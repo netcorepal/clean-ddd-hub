@@ -8,6 +8,7 @@ import { Separator } from "@/components/ui/separator";
 const EventsSection = ({ limit = 0 }) => {
   const events = [
     {
+      id: "ddd-europe-2025",
       title: "DDD Europe Conference",
       date: "June 15-17, 2025",
       location: "Amsterdam, Netherlands",
@@ -16,6 +17,7 @@ const EventsSection = ({ limit = 0 }) => {
       link: "https://dddeurope.com"
     },
     {
+      id: "clean-architecture-workshop",
       title: "Clean Architecture Workshop",
       date: "July 23, 2025",
       location: "Online (Zoom)",
@@ -24,6 +26,7 @@ const EventsSection = ({ limit = 0 }) => {
       link: "#"
     },
     {
+      id: "domain-modeling-meetup",
       title: "Domain Modeling Meetup",
       date: "August 5, 2025",
       location: "Berlin, Germany",
@@ -69,10 +72,12 @@ const EventsSection = ({ limit = 0 }) => {
               <CardFooter className="flex justify-between">
                 <Button variant="outline" size="sm" asChild>
                   <a href={event.link} target="_blank" rel="noopener noreferrer" className="flex items-center">
-                    Details <ExternalLink className="ml-1 h-3 w-3" />
+                    Website <ExternalLink className="ml-1 h-3 w-3" />
                   </a>
                 </Button>
-                <Button size="sm">Register</Button>
+                <Button size="sm" asChild>
+                  <Link to={`/events/${event.id}`}>Details</Link>
+                </Button>
               </CardFooter>
             </Card>
           ))}
