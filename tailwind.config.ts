@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -52,16 +53,19 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
-				}
+				ddd: {
+					50: '#f0f5ff',
+					100: '#e0eaff',
+					200: '#c7d7fe',
+					300: '#a5bbfc',
+					400: '#8197f8',
+					500: '#6371f1',
+					600: '#4c4ce4',
+					700: '#3e3fc9',
+					800: '#3435a3',
+					900: '#2f3380',
+					950: '#1c1e50',
+				},
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -89,7 +93,27 @@ export default {
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+			},
+			typography: {
+				DEFAULT: {
+					css: {
+						code: {
+							borderRadius: '0.25rem',
+							padding: '0.15rem 0.3rem',
+							backgroundColor: 'rgb(243, 244, 246)',
+						},
+						pre: {
+							backgroundColor: 'rgb(243, 244, 246)',
+							paddingTop: '0.75rem',
+							paddingRight: '1rem',
+							paddingBottom: '0.75rem',
+							paddingLeft: '1rem',
+							borderRadius: '0.5rem',
+							border: '1px solid rgb(229, 231, 235)',
+						},
+					},
+				},
+			},
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
