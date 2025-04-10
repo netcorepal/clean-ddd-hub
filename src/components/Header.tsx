@@ -3,9 +3,12 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t } = useTranslation();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -27,21 +30,23 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <Link to="/" className="text-gray-700 hover:text-ddd-600 transition-all-200">
-              Home
+              {t('header.home')}
             </Link>
             <Link to="/knowledge" className="text-gray-700 hover:text-ddd-600 transition-all-200">
-              Knowledge Base
+              {t('header.knowledge')}
             </Link>
             <Link to="/events" className="text-gray-700 hover:text-ddd-600 transition-all-200">
-              Events
+              {t('header.events')}
             </Link>
+            <LanguageSwitcher />
             <Button variant="outline" className="ml-4">
-              Join Community
+              {t('header.joinCommunity')}
             </Button>
           </nav>
           
           {/* Mobile Menu Button */}
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center space-x-2">
+            <LanguageSwitcher />
             <Button variant="ghost" size="sm" onClick={toggleMenu}>
               {isMenuOpen ? (
                 <X className="h-5 w-5" />
@@ -60,24 +65,26 @@ const Header = () => {
               className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md"
               onClick={() => setIsMenuOpen(false)}
             >
-              Home
+              {t('header.home')}
             </Link>
             <Link 
               to="/knowledge" 
               className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md"
               onClick={() => setIsMenuOpen(false)}
             >
-              Knowledge Base
+              {t('header.knowledge')}
             </Link>
             <Link 
               to="/events" 
               className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md"
               onClick={() => setIsMenuOpen(false)}
             >
-              Events
+              {t('header.events')}
             </Link>
             <div className="px-4 py-2">
-              <Button className="w-full">Join Community</Button>
+              <Button className="w-full">
+                {t('header.joinCommunity')}
+              </Button>
             </div>
           </div>
         )}

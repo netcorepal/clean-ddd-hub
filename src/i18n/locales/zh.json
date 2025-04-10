@@ -1,0 +1,16 @@
+
+{
+  "header": {
+    "home": "首页",
+    "knowledge": "知识库",
+    "events": "活动",
+    "joinCommunity": "加入社区"
+  },
+  "footer": {
+    "about": "关于我们",
+    "mission": "我们的使命是推广领域驱动设计原则和实践，帮助组织构建能够有效解决复杂业务领域的软件。",
+    "quickLinks": "快速链接",
+    "contact": "联系我们",
+    "copyright": "© 2025 Clean DDD。保留所有权利。"
+  }
+}

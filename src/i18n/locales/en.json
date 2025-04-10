@@ -1,0 +1,16 @@
+
+{
+  "header": {
+    "home": "Home",
+    "knowledge": "Knowledge Base",
+    "events": "Events",
+    "joinCommunity": "Join Community"
+  },
+  "footer": {
+    "about": "About Us",
+    "mission": "Our mission is to promote Domain-Driven Design principles and practices to help organizations build software that effectively addresses complex business domains.",
+    "quickLinks": "Quick Links",
+    "contact": "Contact",
+    "copyright": "© 2025 Clean DDD. All rights reserved."
+  }
+}
