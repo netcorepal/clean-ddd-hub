@@ -1,4 +1,3 @@
-
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
@@ -18,7 +17,7 @@ i18n
         translation: zhTranslation
       }
     },
-    lng: localStorage.getItem('language') || 'en', // Default language
+    lng: localStorage.getItem('language') || (navigator.language.startsWith('zh') ? 'zh' : 'en'), // Default language
     fallbackLng: 'en',
     interpolation: {
       escapeValue: false // React already safes from XSS
