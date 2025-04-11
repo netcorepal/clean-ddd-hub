@@ -104,7 +104,7 @@ const Header = () => {
                 {t('header.events')}
               </Link>
               <div className="px-4 py-2">
-                <Button className="w-full">
+                <Button className="w-full" onClick={toggleQrModal}>
                   {t('header.joinCommunity')}
                 </Button>
               </div>
