@@ -13,7 +13,10 @@
     "mission": "Our mission is to promote Domain-Driven Design principles and practices to help organizations build software that effectively addresses complex business domains.",
     "quickLinks": "Quick Links",
     "contact": "Contact",
-    "copyright": "© 2025 Clean DDD. All rights reserved."
+    "copyright": "© 2025 Clean DDD. All rights reserved.",
+    "followUs": "Follow Us",
+    "qrCodeAlt": "QR Code for WeChat Official Account",
+    "qrCodeDescription": "Scan the QR code with WeChat to follow our official account."
   },
   "frameworks": {
     "title": "Development Frameworks",

@@ -13,7 +13,10 @@
     "mission": "我们的使命是推广领域驱动设计原则和实践，帮助组织构建能够有效解决复杂业务领域的软件。",
     "quickLinks": "快速链接",
     "contact": "联系我们",
-    "copyright": "© 2025 Clean DDD。保留所有权利。"
+    "copyright": "© 2025 Clean DDD。保留所有权利。",
+    "followUs": "关注公众号",
+    "qrCodeAlt": "微信公众号二维码",
+    "qrCodeDescription": "微信扫码关注公众号"
   },
   "frameworks": {
     "title": "开发框架",

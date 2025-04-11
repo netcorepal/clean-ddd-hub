@@ -48,6 +48,19 @@ const Footer = () => {
             </ul>
           </div>
           
+          
+          <div>
+            <h3 className="text-lg font-semibold mb-4">{t('footer.followUs')}</h3>
+            <div className="flex items-start">
+              <img
+                src="/gzh_qrcode.jpg"
+                alt={t('footer.qrCodeAlt')}
+                className="w-32 h-32"
+              />
+            </div>
+          </div>
+
+
           <div>
             <h3 className="text-lg font-semibold mb-4">{t('footer.contact')}</h3>
             <ul className="space-y-3">
@@ -57,27 +70,6 @@ const Footer = () => {
                 </a>
               </li>
             </ul>
-          </div>
-          
-          <div>
-            <h3 className="text-lg font-semibold mb-4">关注公众号</h3>
-            <div className="flex items-start">
-              <img
-                src="/gzh_qrcode.jpg"
-                alt="公众号二维码"
-                className="w-32 h-32"
-              />
-              <p className="text-sm text-gray-400 ml-4">微信扫码关注公众号</p>
-            </div>
-          </div>
-          
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Social</h3>
-            <div className="flex space-x-4">
-              <a href="https://github.com/netcorepal" className="text-gray-400 hover:text-ddd-400 transition-colors">
-                GitHub
-              </a>
-            </div>
           </div>
         </div>
         
