@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
@@ -7,6 +8,7 @@ import LanguageSwitcher from "./LanguageSwitcher";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [logoError, setLogoError] = useState(false);
   const { t } = useTranslation();
 
   const toggleMenu = () => {
@@ -19,11 +21,19 @@ const Header = () => {
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2">
-              <img 
-                src="/lovable-uploads/logo.png" 
-                alt="Clean DDD Logo" 
-                className="h-8 w-auto"
-              />
+              {logoError ? (
+                <div className="w-8 h-8 bg-gradient-to-br from-ddd-600 to-ddd-800 rounded-md flex items-center justify-center">
+                  <span className="text-white font-bold text-xs">DDD</span>
+                </div>
+              ) : (
+                <img 
+                  src="/lovable-uploads/logo.png" 
+                  alt="Clean DDD Logo" 
+                  className="h-8 w-auto"
+                  onError={() => setLogoError(true)}
+                />
+              )}
+              <span className="text-xl font-bold text-gray-900">Clean DDD</span>
             </Link>
           </div>
           
