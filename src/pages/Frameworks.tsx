@@ -5,7 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, FileCode, GitHub } from "lucide-react";
+import { ExternalLink, FileCode, Github } from "lucide-react";
 
 interface Framework {
   name: string;
@@ -115,7 +115,7 @@ const Frameworks = () => {
                 </CardContent>
                 <CardFooter className="flex justify-between border-t pt-6">
                   <div className="flex items-center text-sm text-gray-500">
-                    <GitHub className="h-4 w-4 mr-1" />
+                    <Github className="h-4 w-4 mr-1" />
                     {t('frameworks.githubRepo')}
                   </div>
                   <Button variant="outline" size="sm" className="gap-1" asChild>
