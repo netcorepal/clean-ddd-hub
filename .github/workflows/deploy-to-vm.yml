@@ -3,7 +3,7 @@ name: Deploy to Azure VM
 on:
   push:
     branches:
-      - release  # 在推送到 main 分支时触发部署
+      - release  # 在推送到 release 分支时触发部署
 
 jobs:
   deploy:
@@ -13,32 +13,27 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: 18
+    - name: Set up Docker
+      uses: docker/setup-buildx-action@v2
 
-    - name: Install dependencies
-      run: npm install
+    - name: Build Docker image
+      run: |
+        docker build -t clean-ddd-hub:latest .
 
-    - name: Build project
-      run: npm run build
-
-    - name: Deploy to Azure VM
+    - name: Push Docker image to VM
       uses: appleboy/ssh-action@v0.1.6
       with:
-        host: ${{ secrets.VM_HOST }} # 虚拟机的 IP 地址
-        username: ${{ secrets.VM_USER }} # SSH 用户名
-        key: ${{ secrets.VM_SSH_KEY }} # 私钥内容
-        port: ${{ secrets.VM_PORT }} # SSH 端口，默认 22
+        host: ${{ secrets.VM_HOST }}
+        username: ${{ secrets.VM_USER }}
+        key: ${{ secrets.VM_SSH_KEY }}
+        port: ${{ secrets.VM_PORT }}
         script: |
-          # 停止当前运行的服务（如果有）
-          pm2 stop all || true
-          # 删除旧代码
-          rm -rf /var/www/clean-ddd-hub
-          # 上传新代码
-          mkdir -p /var/www/clean-ddd-hub
-          # 将构建后的文件复制到目标目录
-          rsync -avz --delete ./dist/ /var/www/clean-ddd-hub/
-          # 启动服务
-          pm2 start /var/www/clean-ddd-hub/index.js --name clean-ddd-hub
+          # 停止当前运行的容器（如果有）
+          docker stop clean-ddd-hub || true
+          docker rm clean-ddd-hub || true
+          # 删除旧镜像
+          docker rmi clean-ddd-hub:latest || true
+          # 上传新镜像
+          docker load < /path/to/clean-ddd-hub.tar
+          # 启动新容器
+          docker run -d --name clean-ddd-hub -p 3000:3000 clean-ddd-hub:latest
