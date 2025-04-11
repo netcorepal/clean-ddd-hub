@@ -39,4 +39,4 @@ jobs:
           # 加载新镜像
           docker load < /tmp/clean-ddd-hub.tar
           # 启动新容器
-          docker run -d --name clean-ddd-hub -p 3000:3000 clean-ddd-hub:latest
+          docker run -d --name clean-ddd-hub -p 80:3000 clean-ddd-hub:latest
