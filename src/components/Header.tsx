@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
@@ -20,14 +19,14 @@ const Header = () => {
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-br from-ddd-600 to-ddd-800 rounded-md flex items-center justify-center">
-                <span className="text-white font-bold text-xs">DDD</span>
-              </div>
-              <span className="text-xl font-bold text-gray-900">Clean DDD</span>
+              <img 
+                src="/lovable-uploads/logo.png" 
+                alt="Clean DDD Logo" 
+                className="h-8 w-auto"
+              />
             </Link>
           </div>
           
-          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <Link to="/" className="text-gray-700 hover:text-ddd-600 transition-all-200">
               {t('header.home')}
@@ -47,7 +46,6 @@ const Header = () => {
             </Button>
           </nav>
           
-          {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center space-x-2">
             <LanguageSwitcher />
             <Button variant="ghost" size="sm" onClick={toggleMenu}>
@@ -60,7 +58,6 @@ const Header = () => {
           </div>
         </div>
         
-        {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden py-4 space-y-4">
             <Link 

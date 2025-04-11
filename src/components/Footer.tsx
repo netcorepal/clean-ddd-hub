@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
@@ -11,10 +10,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
             <Link to="/" className="flex items-center space-x-2 mb-6">
-              <div className="w-8 h-8 bg-gradient-to-br from-ddd-500 to-ddd-700 rounded-md flex items-center justify-center">
-                <span className="text-white font-bold text-xs">DDD</span>
-              </div>
-              <span className="text-lg font-bold text-white">Clean DDD</span>
+              <img 
+                src="/lovable-uploads/logo.png" 
+                alt="Clean DDD Logo" 
+                className="h-8 w-auto"
+              />
             </Link>
             <div className="mb-6">
               <h3 className="text-lg font-semibold mb-3">{t('footer.about')}</h3>
