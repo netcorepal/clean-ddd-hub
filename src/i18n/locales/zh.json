@@ -4,7 +4,9 @@
     "knowledge": "知识库",
     "events": "活动",
     "frameworks": "框架",
-    "joinCommunity": "加入社区"
+    "joinCommunity": "加入社区",
+    "qrCodeTitle": "微信扫码加入加群",
+    "close": "关闭"
   },
   "footer": {
     "about": "关于我们",

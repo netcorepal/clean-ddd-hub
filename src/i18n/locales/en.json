@@ -4,7 +4,9 @@
     "knowledge": "Knowledge Base",
     "events": "Events",
     "frameworks": "Frameworks",
-    "joinCommunity": "Join Community"
+    "joinCommunity": "Join Community",
+    "qrCodeTitle": "Join the WeChat Group by Scanning the QR Code",
+    "close": "Close"
   },
   "footer": {
     "about": "About Us",
