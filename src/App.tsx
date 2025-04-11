@@ -11,6 +11,7 @@ import NotFound from "./pages/NotFound";
 import EventDetail from "./pages/EventDetail";
 import KnowledgeDetail from "./pages/KnowledgeDetail";
 import KnowledgeCatalog from "./pages/KnowledgeCatalog";
+import Frameworks from "./pages/Frameworks";
 import { useState } from "react";
 
 const App = () => {
@@ -28,6 +29,7 @@ const App = () => {
             <Route path="/knowledge" element={<Knowledge />} />
             <Route path="/knowledge/catalog" element={<KnowledgeCatalog />} />
             <Route path="/knowledge/:id" element={<KnowledgeDetail />} />
+            <Route path="/frameworks" element={<Frameworks />} />
             <Route path="/events" element={<Events />} />
             <Route path="/events/:id" element={<EventDetail />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

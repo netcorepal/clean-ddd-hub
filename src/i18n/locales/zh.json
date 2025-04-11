@@ -4,6 +4,7 @@
     "home": "首页",
     "knowledge": "知识库",
     "events": "活动",
+    "frameworks": "框架",
     "joinCommunity": "加入社区"
   },
   "footer": {
@@ -12,5 +13,13 @@
     "quickLinks": "快速链接",
     "contact": "联系我们",
     "copyright": "© 2025 Clean DDD。保留所有权利。"
+  },
+  "frameworks": {
+    "title": "开发框架",
+    "subtitle": "支持清洁DDD原则的技术框架",
+    "dotnetTitle": ".NET框架",
+    "javaTitle": "Java框架",
+    "githubRepo": "GitHub仓库",
+    "visitRepo": "访问仓库"
   }
 }

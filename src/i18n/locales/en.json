@@ -4,6 +4,7 @@
     "home": "Home",
     "knowledge": "Knowledge Base",
     "events": "Events",
+    "frameworks": "Frameworks",
     "joinCommunity": "Join Community"
   },
   "footer": {
@@ -12,5 +13,13 @@
     "quickLinks": "Quick Links",
     "contact": "Contact",
     "copyright": "© 2025 Clean DDD. All rights reserved."
+  },
+  "frameworks": {
+    "title": "Development Frameworks",
+    "subtitle": "Technical frameworks that support Clean DDD principles",
+    "dotnetTitle": ".NET Framework",
+    "javaTitle": "Java Framework",
+    "githubRepo": "GitHub Repository",
+    "visitRepo": "Visit Repository"
   }
 }

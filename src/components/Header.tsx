@@ -35,6 +35,9 @@ const Header = () => {
             <Link to="/knowledge" className="text-gray-700 hover:text-ddd-600 transition-all-200">
               {t('header.knowledge')}
             </Link>
+            <Link to="/frameworks" className="text-gray-700 hover:text-ddd-600 transition-all-200">
+              {t('header.frameworks')}
+            </Link>
             <Link to="/events" className="text-gray-700 hover:text-ddd-600 transition-all-200">
               {t('header.events')}
             </Link>
@@ -73,6 +76,13 @@ const Header = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               {t('header.knowledge')}
+            </Link>
+            <Link 
+              to="/frameworks" 
+              className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {t('header.frameworks')}
             </Link>
             <Link 
               to="/events" 
