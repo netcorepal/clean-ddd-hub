@@ -19,7 +19,7 @@ const Footer = () => {
                 </div>
               ) : (
                 <img 
-                  src="/lovable-uploads/logo.png" 
+                  src="/logo-white.png" 
                   alt="Clean DDD Logo" 
                   className="h-8 w-auto"
                   onError={() => setLogoError(true)}
