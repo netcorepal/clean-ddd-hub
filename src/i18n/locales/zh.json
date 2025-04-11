@@ -1,4 +1,3 @@
-
 {
   "header": {
     "home": "首页",
@@ -16,27 +15,35 @@
   },
   "frameworks": {
     "title": "开发框架",
-    "subtitle": "支持清洁DDD原则的技术框架",
-    "dotnetTitle": ".NET框架",
-    "javaTitle": "Java框架",
+    "subtitle": "支持 Clean DDD 的技术框架",
+    "dotnetTitle": ".NET 框架",
+    "javaTitle": "Java 框架",
     "githubRepo": "GitHub仓库",
     "visitRepo": "访问仓库"
   },
   "home": {
     "hero": {
-      "title": "清洁",
-      "titleHighlight": "领域驱动设计",
-      "subtitle": "通过战略设计和清洁架构原则构建可维护的软件系统",
+      "title": "Clean",
+      "titleHighlight": "Domain-Driven Design",
+      "subtitle": "通过一套易理解的概念和可执行规则帮助开发者实践领域驱动设计，构建具备高度可维护性的软件系统。",
       "exploreButton": "探索知识库",
       "eventsButton": "即将举行的活动"
     },
     "intro": {
-      "title": "什么是清洁DDD？",
-      "paragraph1": "清洁领域驱动设计（DDD）将DDD的战略设计原则与清洁架构模式相结合，创建既符合业务需求又技术合理的软件系统。",
-      "paragraph2": "我们的社区致力于探索和发展这些实践，为各级实践者提供资源和知识共享。",
-      "benefitsTitle": "清洁DDD的优势",
+      "title": "什么是 Clean DDD？",
+      "paragraph1": "它包含一种价值取向，一组概念定义，一种建模方法，一套代码规范，借助 Clean DDD，开发者可以更容易地完成需求分析、模型设计以及代码实现。",
+      "paragraph2": "我们的目的是最大程度地简化领域驱动设计的学习曲线，帮助开发者更快地掌握领域驱动设计的核心概念和实践。",
+      "benefitsTitle": "Clean DDD 的优势",
       "coreConceptsTitle": "核心概念",
-      "coreConceptsDescription": "清洁DDD方法围绕业务领域组织代码，同时通过架构边界保持关注点分离。"
+      "coreConceptsDescription": "Clean DDD 关注需求、模型和代码的一致性，强调在满足需求的同时避免过度设计，持续保持代码的可维护性。",
+      "benefits": {
+        "0": "概念通俗易懂，便于理解",
+        "1": "建模方法简单易学",
+        "2": "规范明确易于执行",
+        "3": "不依赖开发者的建模经验",
+        "4": "提供详尽的文档和示例",
+        "5": "不强绑定任何特定的开发语言"
+      }
     }
   },
   "knowledge": {
@@ -56,11 +63,12 @@
         "description": "构建具有明确关注点分离的可维护系统。"
       },
       "browseButton": "浏览完整目录"
-    }
+    },
+    "comingSoon": "即将到来！"
   },
   "events": {
     "hero": {
-      "title": "DDD社区活动",
+      "title": "Clean DDD 社区活动",
       "subtitle": "参加我们的会议、工作坊和聚会，学习并与DDD社区建立联系。"
     },
     "filters": {
@@ -89,6 +97,7 @@
       "description": "探索我们过去活动的录像和材料。",
       "viewResources": "查看资源",
       "viewRecording": "查看录像"
-    }
+    },
+    "comingSoon": "即将到来！"
   }
 }

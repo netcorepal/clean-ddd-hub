@@ -1,4 +1,3 @@
-
 import { CheckCircle } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { useTranslation } from "react-i18next";
@@ -7,11 +6,12 @@ const IntroSection = () => {
   const { t } = useTranslation();
   
   const benefits = [
-    "Strategic focus on domain complexity",
-    "Clear boundaries between system components",
-    "Improved collaboration between tech and domain experts",
-    "More maintainable and adaptable codebases",
-    "Better alignment with business goals and needs"
+    t('home.intro.benefits.0'),
+    t('home.intro.benefits.1'),
+    t('home.intro.benefits.2'),
+    t('home.intro.benefits.3'),
+    t('home.intro.benefits.4'),
+    t('home.intro.benefits.5')
   ];
 
   return (
@@ -46,19 +46,19 @@ const IntroSection = () => {
                 <div className="code-block">
                   <pre>
 {`// Strategic design patterns
-domain.core.entities
-domain.core.valueObjects
-domain.core.aggregates
+CQRS
+EventSourcing
 
-// Tactical patterns
-application.services
-application.useCases
-infrastructure.repositories
-infrastructure.adapters
+// Key Concepts
 
-// Clean architecture layers
-presentation.controllers
-presentation.viewModels`}
+Aggregate and AggregateRoot
+Entity and ValueObject
+Command and CommandHanlder
+DomainEvent and DomainEventHandler
+
+// Application
+Controller
+Jobs`}
                   </pre>
                 </div>
                 <p className="text-gray-600 mt-4">

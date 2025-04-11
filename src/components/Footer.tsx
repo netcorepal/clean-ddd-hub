@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
@@ -57,24 +56,25 @@ const Footer = () => {
                   contact@cleanddd.com
                 </a>
               </li>
-              <li className="text-gray-400">
-                <a href="tel:+1-123-456-7890" className="hover:text-ddd-400 transition-colors">
-                  +1-123-456-7890
-                </a>
-              </li>
             </ul>
+          </div>
+          
+          <div>
+            <h3 className="text-lg font-semibold mb-4">关注公众号</h3>
+            <div className="flex items-start">
+              <img
+                src="/gzh_qrcode.jpg"
+                alt="公众号二维码"
+                className="w-32 h-32"
+              />
+              <p className="text-sm text-gray-400 ml-4">微信扫码关注公众号</p>
+            </div>
           </div>
           
           <div>
             <h3 className="text-lg font-semibold mb-4">Social</h3>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-ddd-400 transition-colors">
-                Twitter
-              </a>
-              <a href="#" className="text-gray-400 hover:text-ddd-400 transition-colors">
-                LinkedIn
-              </a>
-              <a href="#" className="text-gray-400 hover:text-ddd-400 transition-colors">
+              <a href="https://github.com/netcorepal" className="text-gray-400 hover:text-ddd-400 transition-colors">
                 GitHub
               </a>
             </div>

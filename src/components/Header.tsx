@@ -47,9 +47,9 @@ const Header = () => {
             <Link to="/frameworks" className="text-gray-700 hover:text-ddd-600 transition-all-200">
               {t('header.frameworks')}
             </Link>
-            <Link to="/events" className="text-gray-700 hover:text-ddd-600 transition-all-200">
+            {/* <Link to="/events" className="text-gray-700 hover:text-ddd-600 transition-all-200">
               {t('header.events')}
-            </Link>
+            </Link> */}
             <LanguageSwitcher />
             <Button variant="outline" className="ml-4">
               {t('header.joinCommunity')}

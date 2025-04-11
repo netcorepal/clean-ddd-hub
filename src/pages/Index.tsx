@@ -13,8 +13,8 @@ const Index = () => {
       <main className="flex-grow">
         <Hero />
         <IntroSection />
-        <KnowledgeBaseSection limit={4} />
-        <EventsSection limit={3} />
+        {/* <KnowledgeBaseSection limit={4} />
+        <EventsSection limit={3} /> */}
       </main>
       <Footer />
     </div>
