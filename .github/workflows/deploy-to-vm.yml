@@ -16,9 +16,10 @@ jobs:
     - name: Set up Docker
       uses: docker/setup-buildx-action@v2
 
-    - name: Build Docker image
+    - name: Build and save Docker image
       run: |
         docker build -t clean-ddd-hub:latest .
+        docker save clean-ddd-hub:latest > clean-ddd-hub.tar
 
     - name: Push Docker image to VM
       uses: appleboy/ssh-action@v0.1.6
@@ -28,12 +29,14 @@ jobs:
         key: ${{ secrets.VM_SSH_KEY }}
         port: ${{ secrets.VM_PORT }}
         script: |
+          # 上传镜像文件到目标服务器
+          scp clean-ddd-hub.tar ${{ secrets.VM_USER }}@${{ secrets.VM_HOST }}:/tmp/clean-ddd-hub.tar
           # 停止当前运行的容器（如果有）
           docker stop clean-ddd-hub || true
           docker rm clean-ddd-hub || true
           # 删除旧镜像
           docker rmi clean-ddd-hub:latest || true
-          # 上传新镜像
-          docker load < /path/to/clean-ddd-hub.tar
+          # 加载新镜像
+          docker load < /tmp/clean-ddd-hub.tar
           # 启动新容器
           docker run -d --name clean-ddd-hub -p 3000:3000 clean-ddd-hub:latest
