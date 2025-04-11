@@ -2,8 +2,11 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Hero = () => {
+  const { t } = useTranslation();
+  
   return (
     <div className="relative overflow-hidden bg-white">
       <div className="absolute inset-0 z-0 bg-gradient-to-b from-blue-50 to-white opacity-70"></div>
@@ -20,20 +23,20 @@ const Hero = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
-              Clean <span className="gradient-text">Domain-Driven Design</span>
+              {t('home.hero.title')} <span className="gradient-text">{t('home.hero.titleHighlight')}</span>
             </h1>
             <p className="mt-6 text-xl text-gray-500 max-w-2xl mx-auto">
-              Building maintainable software systems through strategic design and clean architecture principles
+              {t('home.hero.subtitle')}
             </p>
             <div className="mt-10 flex justify-center space-x-4">
               <Button asChild size="lg">
                 <Link to="/knowledge">
-                  Explore Knowledge Base <ArrowRight className="ml-2 h-4 w-4" />
+                  {t('home.hero.exploreButton')} <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
               <Button variant="outline" size="lg" asChild>
                 <Link to="/events">
-                  Upcoming Events
+                  {t('home.hero.eventsButton')}
                 </Link>
               </Button>
             </div>

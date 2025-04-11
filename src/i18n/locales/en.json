@@ -21,5 +21,74 @@
     "javaTitle": "Java Framework",
     "githubRepo": "GitHub Repository",
     "visitRepo": "Visit Repository"
+  },
+  "home": {
+    "hero": {
+      "title": "Clean",
+      "titleHighlight": "Domain-Driven Design",
+      "subtitle": "Building maintainable software systems through strategic design and clean architecture principles",
+      "exploreButton": "Explore Knowledge Base",
+      "eventsButton": "Upcoming Events"
+    },
+    "intro": {
+      "title": "What is Clean DDD?",
+      "paragraph1": "Clean Domain-Driven Design (DDD) combines the strategic design principles of DDD with clean architecture patterns to create software systems that are both aligned with business needs and technically sound.",
+      "paragraph2": "Our community is dedicated to exploring and evolving these practices, providing resources and knowledge sharing for practitioners at all levels.",
+      "benefitsTitle": "Benefits of Clean DDD",
+      "coreConceptsTitle": "Core Concepts",
+      "coreConceptsDescription": "The Clean DDD approach organizes code around business domains while maintaining separation of concerns through architectural boundaries."
+    }
+  },
+  "knowledge": {
+    "hero": {
+      "title": "Knowledge Base",
+      "subtitle": "Comprehensive resources on Domain-Driven Design principles, patterns, and practices.",
+      "searchPlaceholder": "Search resources..."
+    },
+    "popularTopics": {
+      "title": "Popular Topics",
+      "domainModeling": {
+        "title": "Domain Modeling",
+        "description": "Techniques for creating effective domain models that capture business complexity."
+      },
+      "cleanArchitecture": {
+        "title": "Clean Architecture",
+        "description": "Building maintainable systems with clear separation of concerns."
+      },
+      "browseButton": "Browse Full Catalog"
+    }
+  },
+  "events": {
+    "hero": {
+      "title": "DDD Community Events",
+      "subtitle": "Join us at conferences, workshops, and meetups to learn and connect with the DDD community."
+    },
+    "filters": {
+      "all": "All Events",
+      "conferences": "Conferences",
+      "workshops": "Workshops",
+      "meetups": "Meetups",
+      "online": "Online"
+    },
+    "hostSection": {
+      "title": "Host or Speak at an Event",
+      "description": "We're always looking for speakers and hosts for our community events. Share your knowledge and experience with the DDD community.",
+      "submitTalk": {
+        "title": "Submit a Talk",
+        "description": "Have insights or experiences to share? Submit a talk proposal for one of our upcoming events.",
+        "button": "Submit Proposal"
+      },
+      "hostMeetup": {
+        "title": "Host a Meetup",
+        "description": "Interested in hosting a DDD meetup in your city? We can help you get started.",
+        "button": "Become a Host"
+      }
+    },
+    "pastEvents": {
+      "title": "Past Events",
+      "description": "Explore recordings and materials from our past events.",
+      "viewResources": "View Resources",
+      "viewRecording": "View Recording"
+    }
   }
 }

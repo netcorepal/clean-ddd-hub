@@ -21,5 +21,74 @@
     "javaTitle": "Java框架",
     "githubRepo": "GitHub仓库",
     "visitRepo": "访问仓库"
+  },
+  "home": {
+    "hero": {
+      "title": "清洁",
+      "titleHighlight": "领域驱动设计",
+      "subtitle": "通过战略设计和清洁架构原则构建可维护的软件系统",
+      "exploreButton": "探索知识库",
+      "eventsButton": "即将举行的活动"
+    },
+    "intro": {
+      "title": "什么是清洁DDD？",
+      "paragraph1": "清洁领域驱动设计（DDD）将DDD的战略设计原则与清洁架构模式相结合，创建既符合业务需求又技术合理的软件系统。",
+      "paragraph2": "我们的社区致力于探索和发展这些实践，为各级实践者提供资源和知识共享。",
+      "benefitsTitle": "清洁DDD的优势",
+      "coreConceptsTitle": "核心概念",
+      "coreConceptsDescription": "清洁DDD方法围绕业务领域组织代码，同时通过架构边界保持关注点分离。"
+    }
+  },
+  "knowledge": {
+    "hero": {
+      "title": "知识库",
+      "subtitle": "关于领域驱动设计原则、模式和实践的综合资源。",
+      "searchPlaceholder": "搜索资源..."
+    },
+    "popularTopics": {
+      "title": "热门主题",
+      "domainModeling": {
+        "title": "领域建模",
+        "description": "创建能够捕捉业务复杂性的有效领域模型的技术。"
+      },
+      "cleanArchitecture": {
+        "title": "清洁架构",
+        "description": "构建具有明确关注点分离的可维护系统。"
+      },
+      "browseButton": "浏览完整目录"
+    }
+  },
+  "events": {
+    "hero": {
+      "title": "DDD社区活动",
+      "subtitle": "参加我们的会议、工作坊和聚会，学习并与DDD社区建立联系。"
+    },
+    "filters": {
+      "all": "所有活动",
+      "conferences": "会议",
+      "workshops": "工作坊",
+      "meetups": "聚会",
+      "online": "线上"
+    },
+    "hostSection": {
+      "title": "主持或在活动中演讲",
+      "description": "我们一直在寻找社区活动的演讲者和主持人。与DDD社区分享您的知识和经验。",
+      "submitTalk": {
+        "title": "提交演讲",
+        "description": "有见解或经验要分享？为我们即将举行的活动提交演讲提案。",
+        "button": "提交提案"
+      },
+      "hostMeetup": {
+        "title": "主持聚会",
+        "description": "有兴趣在您所在的城市主持DDD聚会？我们可以帮助您开始。",
+        "button": "成为主持人"
+      }
+    },
+    "pastEvents": {
+      "title": "过去的活动",
+      "description": "探索我们过去活动的录像和材料。",
+      "viewResources": "查看资源",
+      "viewRecording": "查看录像"
+    }
   }
 }

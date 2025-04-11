@@ -6,8 +6,11 @@ import { Calendar, Filter } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Card, CardContent } from "@/components/ui/card";
+import { useTranslation } from "react-i18next";
 
 const Events = () => {
+  const { t } = useTranslation();
+  
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -17,16 +20,16 @@ const Events = () => {
             <div className="flex justify-center mb-6">
               <Calendar className="h-12 w-12 text-ddd-600" />
             </div>
-            <h1 className="text-4xl font-bold mb-4">DDD Community Events</h1>
+            <h1 className="text-4xl font-bold mb-4">{t('events.hero.title')}</h1>
             <p className="text-xl text-gray-600 mb-8">
-              Join us at conferences, workshops, and meetups to learn and connect with the DDD community.
+              {t('events.hero.subtitle')}
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button>All Events</Button>
-              <Button variant="outline">Conferences</Button>
-              <Button variant="outline">Workshops</Button>
-              <Button variant="outline">Meetups</Button>
-              <Button variant="outline">Online</Button>
+              <Button>{t('events.filters.all')}</Button>
+              <Button variant="outline">{t('events.filters.conferences')}</Button>
+              <Button variant="outline">{t('events.filters.workshops')}</Button>
+              <Button variant="outline">{t('events.filters.meetups')}</Button>
+              <Button variant="outline">{t('events.filters.online')}</Button>
             </div>
           </div>
         </div>
@@ -38,30 +41,29 @@ const Events = () => {
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
-              <h2 className="text-3xl font-bold mb-6">Host or Speak at an Event</h2>
+              <h2 className="text-3xl font-bold mb-6">{t('events.hostSection.title')}</h2>
               <p className="text-lg text-gray-600 mb-8">
-                We're always looking for speakers and hosts for our community events. Share your knowledge 
-                and experience with the DDD community.
+                {t('events.hostSection.description')}
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Card>
                   <CardContent className="p-6">
-                    <h3 className="text-xl font-semibold mb-3">Submit a Talk</h3>
+                    <h3 className="text-xl font-semibold mb-3">{t('events.hostSection.submitTalk.title')}</h3>
                     <p className="text-gray-600 mb-4">
-                      Have insights or experiences to share? Submit a talk proposal for one of our upcoming events.
+                      {t('events.hostSection.submitTalk.description')}
                     </p>
-                    <Button>Submit Proposal</Button>
+                    <Button>{t('events.hostSection.submitTalk.button')}</Button>
                   </CardContent>
                 </Card>
                 
                 <Card>
                   <CardContent className="p-6">
-                    <h3 className="text-xl font-semibold mb-3">Host a Meetup</h3>
+                    <h3 className="text-xl font-semibold mb-3">{t('events.hostSection.hostMeetup.title')}</h3>
                     <p className="text-gray-600 mb-4">
-                      Interested in hosting a DDD meetup in your city? We can help you get started.
+                      {t('events.hostSection.hostMeetup.description')}
                     </p>
-                    <Button>Become a Host</Button>
+                    <Button>{t('events.hostSection.hostMeetup.button')}</Button>
                   </CardContent>
                 </Card>
               </div>
@@ -72,9 +74,9 @@ const Events = () => {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-3xl font-bold mb-6">Past Events</h2>
+              <h2 className="text-3xl font-bold mb-6">{t('events.pastEvents.title')}</h2>
               <p className="text-lg text-gray-600 mb-8">
-                Explore recordings and materials from our past events.
+                {t('events.pastEvents.description')}
               </p>
               
               <div className="grid grid-cols-1 gap-4">
@@ -84,7 +86,7 @@ const Events = () => {
                       <h3 className="text-xl font-semibold">DDD Conference 2024</h3>
                       <p className="text-gray-600 mt-1">March 10-12, 2024 • New York, NY</p>
                     </div>
-                    <Button variant="outline" size="sm">View Resources</Button>
+                    <Button variant="outline" size="sm">{t('events.pastEvents.viewResources')}</Button>
                   </div>
                 </div>
                 
@@ -94,7 +96,7 @@ const Events = () => {
                       <h3 className="text-xl font-semibold">Clean Architecture Workshop</h3>
                       <p className="text-gray-600 mt-1">February 15, 2024 • Online</p>
                     </div>
-                    <Button variant="outline" size="sm">View Recording</Button>
+                    <Button variant="outline" size="sm">{t('events.pastEvents.viewRecording')}</Button>
                   </div>
                 </div>
                 
@@ -104,7 +106,7 @@ const Events = () => {
                       <h3 className="text-xl font-semibold">DDD & Microservices Symposium</h3>
                       <p className="text-gray-600 mt-1">January 20, 2024 • London, UK</p>
                     </div>
-                    <Button variant="outline" size="sm">View Resources</Button>
+                    <Button variant="outline" size="sm">{t('events.pastEvents.viewResources')}</Button>
                   </div>
                 </div>
               </div>
