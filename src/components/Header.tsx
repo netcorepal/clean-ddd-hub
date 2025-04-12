@@ -1,6 +1,7 @@
+
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./LanguageSwitcher";
@@ -59,6 +60,12 @@ const Header = () => {
               <Button variant="outline" className="ml-4" onClick={toggleQrModal}>
                 {t('header.joinCommunity')}
               </Button>
+              <Button variant="outline" className="flex items-center gap-2" asChild>
+                <a href="https://github.com/netcorepal" target="_blank" rel="noopener noreferrer">
+                  <Github size={18} />
+                  GitHub
+                </a>
+              </Button>
             </nav>
             
             <div className="md:hidden flex items-center space-x-2">
@@ -103,6 +110,16 @@ const Header = () => {
               >
                 {t('header.events')}
               </Link>
+              <a 
+                href="https://github.com/netcorepal" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <Github size={18} />
+                GitHub
+              </a>
               <div className="px-4 py-2">
                 <Button className="w-full" onClick={toggleQrModal}>
                   {t('header.joinCommunity')}

@@ -1,3 +1,4 @@
+
 {
   "header": {
     "home": "首页",
@@ -6,7 +7,8 @@
     "frameworks": "框架",
     "joinCommunity": "加入社区",
     "qrCodeTitle": "微信扫码加入加群",
-    "close": "关闭"
+    "close": "关闭",
+    "github": "GitHub"
   },
   "footer": {
     "about": "关于我们",
