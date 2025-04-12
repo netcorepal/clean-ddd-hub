@@ -33,7 +33,7 @@ const Header = () => {
                   </div>
                 ) : (
                   <img 
-                    src="/logo.svg" 
+                    src="/logo.png" 
                     alt="Clean DDD Logo" 
                     className="h-8 w-auto"
                     onError={() => setLogoError(true)}
