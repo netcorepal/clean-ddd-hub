@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
@@ -44,6 +45,11 @@ const Footer = () => {
                 <Link to="/events" className="text-gray-400 hover:text-ddd-400 transition-colors">
                   {t('header.events')}
                 </Link>
+              </li>
+              <li>
+                <a href="https://github.com/netcorepal" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-ddd-400 transition-colors">
+                  GitHub
+                </a>
               </li>
             </ul>
           </div>
