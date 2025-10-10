@@ -1,10 +1,10 @@
 # 项目结构最佳实践
 
-## 概述
+## 为什么项目结构很重要？
 
 良好的项目结构是DDD和Clean Architecture成功实施的基础。本文档描述了推荐的项目组织方式，遵循分层架构和关注点分离原则。
 
-## 标准项目结构
+## 标准项目结构是什么样的？
 
 ### 整体结构
 
@@ -20,7 +20,7 @@ MyProject.sln
     └── MyProject.Web.UnitTests/
 ```
 
-### 分层依赖关系
+### 分层依赖关系是怎样的？
 
 **严格单向依赖：** Web → Infrastructure → Domain
 
@@ -29,7 +29,7 @@ MyProject.sln
 - Web 层依赖 Infrastructure 和 Domain 层
 - 测试项目可以依赖对应的被测项目
 
-## Domain 层（领域层）
+## Domain层（领域层）如何组织？
 
 ### 目录结构
 
@@ -74,7 +74,7 @@ MyProject.Domain/
 - 不属于任何特定实体的业务逻辑
 - 跨聚合的复杂业务规则
 
-## Infrastructure 层（基础设施层）
+## Infrastructure层（基础设施层）如何组织？
 
 ### 目录结构
 
@@ -112,7 +112,7 @@ MyProject.Infrastructure/
 - 配置实体映射
 - 处理领域事件发布
 
-## Web 层（表现层）
+## Web层（表现层）如何组织？
 
 ### 目录结构
 
@@ -189,7 +189,7 @@ MyProject.Web/
 - 使用FastEndpoints框架
 - 负责HTTP请求/响应处理
 
-## Test 层（测试项目）
+## Test层（测试项目）如何组织？
 
 ### 目录结构
 
@@ -211,7 +211,7 @@ test/
         └── CreateUserEndpointTests.cs
 ```
 
-## 命名约定
+## 如何命名文件和命名空间？
 
 ### 文件命名
 
@@ -223,7 +223,7 @@ test/
 - **仓储**: `{Entity}Repository.cs`（如 `UserRepository.cs`）
 - **实体配置**: `{Entity}EntityConfiguration.cs`
 
-### 命名空间约定
+### 命名空间应该怎么组织？
 
 ```csharp
 // Domain层
@@ -241,7 +241,7 @@ MyProject.Web.Application.DomainEventHandlers
 MyProject.Web.Endpoints.User
 ```
 
-## 模块化组织
+## 如何进行模块化组织？
 
 对于大型项目，可以按业务模块组织：
 
@@ -261,7 +261,7 @@ MyProject.Web/
 │       └── Queries/
 ```
 
-## 最佳实践
+## 项目结构有哪些最佳实践？
 
 ### 1. 保持层次清晰
 
@@ -293,7 +293,7 @@ MyProject.Web/
 - 提高代码可读性
 - 在每个项目中定义GlobalUsings.cs
 
-## 常见问题
+## 项目结构常见问题有哪些？
 
 ### Q: 为什么仓储放在Infrastructure而不是Domain？
 
@@ -314,7 +314,7 @@ A: 在查询处理器中直接使用DbContext进行跨聚合查询，这是读�
 
 A: DTO可以和查询或命令放在一起，也可以放在独立的Dtos文件夹中。推荐与查询放在一起，因为它们通常是为查询服务的。
 
-## 相关文档
+## 在哪里可以找到相关文档？
 
 - [聚合开发指南](../development-guide/aggregate-development.md)
 - [命令开发指南](../development-guide/command-development.md)

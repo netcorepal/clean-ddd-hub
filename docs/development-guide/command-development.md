@@ -1,10 +1,10 @@
 # 命令开发指南
 
-## 概述
+## 什么是命令？
 
 命令表示用户想要执行的操作，遵循 CQRS 模式。本模板使用 MediatR 库实现命令处理，所有命令处理器会被框架自动注册。
 
-## 文件与目录
+## 命令文件应该放在哪里？
 
 类文件命名应遵循以下规则：
 
@@ -13,7 +13,7 @@
 - 同一个命令及其对应的验证器和处理器定义在同一文件中
 - 不同的命令放在不同文件中
 
-## 开发规则
+## 如何定义命令？
 
 命令的定义应遵循以下规则：
 
@@ -24,27 +24,27 @@
 - 使用 `record` 类型定义命令
 - 框架自动注册命令处理器
 
-## 命令处理器最佳实践
+## 命令处理器有哪些最佳实践？
 
-### 事务管理
+### 如何管理事务？
 
 - **不要手动调用SaveChanges**: 框架会自动在命令处理完成后调用SaveChanges
 - **依赖UnitOfWork模式**: 让框架管理事务边界
 
-### 仓储方法使用
+### 如何使用仓储方法？
 
 - **仅用于业务操作**: 仓储方法只在需要获取聚合根进行业务操作时使用
 - **优先使用异步方法**: 所有仓储操作都应使用异步版本
 - **正确的取消令牌传递**: 将CancellationToken传递给所有异步操作
 - **体现业务意图**: 仓储方法名应该反映业务场景，而不是通用数据访问
 
-### 数据访问原则
+### 数据访问有什么原则？
 
 - 命令处理器使用仓储获取聚合根进行业务操作
 - 如果只是为了检查数据存在性，考虑是否需要完整的聚合根
 - 避免在命令处理器中进行复杂的查询操作
 
-## 必要的using引用
+## 需要引用哪些命名空间？
 
 命令文件中的必要引用已在GlobalUsings.cs中定义：
 
@@ -59,7 +59,7 @@
 
 因此在命令文件中无需重复添加GlobalUsings中已定义的using语句。
 
-## 代码示例
+## 如何编写创建命令？
 
 ### 创建命令示例
 
@@ -110,7 +110,7 @@ public class CreateUserCommandHandler(IUserRepository userRepository)
 }
 ```
 
-### 更新命令示例
+### 如何编写更新命令？
 
 **文件**: `src/MyProject.Web/Application/Commands/User/UpdateUserEmailCommand.cs`
 
@@ -157,7 +157,7 @@ public class UpdateUserEmailCommandHandler(IUserRepository userRepository)
 }
 ```
 
-### 删除命令示例
+### 如何编写删除命令？
 
 **文件**: `src/MyProject.Web/Application/Commands/User/DeleteUserCommand.cs`
 
@@ -193,7 +193,7 @@ public class DeleteUserCommandHandler(IUserRepository userRepository)
 }
 ```
 
-## 命令处理器示例对比
+## 命令处理器的正确和错误写法是什么？
 
 ### ❌ 错误的做法
 
@@ -223,9 +223,9 @@ public async Task<UserId> Handle(CreateUserCommand request, CancellationToken ca
 }
 ```
 
-## 验证器最佳实践
+## 验证器有哪些最佳实践？
 
-### 基本验证规则
+### 如何编写基本验证规则？
 
 ```csharp
 public class CreateOrderCommandValidator : AbstractValidator<CreateOrderCommand>
@@ -268,7 +268,7 @@ public class CreateOrderCommandValidator : AbstractValidator<CreateOrderCommand>
 }
 ```
 
-### 复杂对象验证
+### 如何验证复杂对象？
 
 ```csharp
 public record CreateOrderCommand(
@@ -315,9 +315,9 @@ public class OrderItemDtoValidator : AbstractValidator<OrderItemDto>
 }
 ```
 
-## 异常处理
+## 如何处理异常？
 
-### KnownException使用规范
+### 如何使用KnownException？
 
 在需要抛出业务异常的地方，必须使用 `KnownException` 而不是普通的 `Exception`：
 
@@ -350,9 +350,9 @@ public async Task<OrderId> Handle(OrderPaidCommand request, CancellationToken ca
 - 异常消息会直接返回给客户端
 - 支持本地化和错误码定制
 
-## 常见错误排查
+## 遇到常见错误怎么办？
 
-### 验证器未生效
+### 为什么验证器未生效？
 
 **错误**: 验证器定义了但没有执行
 
@@ -362,7 +362,7 @@ public async Task<OrderId> Handle(OrderPaidCommand request, CancellationToken ca
 - 确保验证器继承 `AbstractValidator<TCommand>`
 - 验证器类名应为 `{CommandName}Validator`
 
-### SaveChanges相关错误
+### 为什么会出现SaveChanges相关错误？
 
 **错误**: 手动调用SaveChanges导致的问题
 
@@ -370,7 +370,7 @@ public async Task<OrderId> Handle(OrderPaidCommand request, CancellationToken ca
 
 **解决**: 移除所有手动的SaveChanges调用，让框架自动处理
 
-### 仓储方法缺失
+### 为什么找不到仓储方法？
 
 **错误**: 找不到仓储中定义的特定方法
 
@@ -378,7 +378,7 @@ public async Task<OrderId> Handle(OrderPaidCommand request, CancellationToken ca
 
 **解决**: 在仓储接口中添加需要的方法定义
 
-## 最佳实践
+## 命令开发有哪些最佳实践？
 
 1. **单一职责**: 每个命令只做一件事情
 2. **验证完整**: 为每个命令提供完整的验证规则
@@ -387,7 +387,7 @@ public async Task<OrderId> Handle(OrderPaidCommand request, CancellationToken ca
 5. **取消令牌**: 正确传递和使用CancellationToken
 6. **命名清晰**: 命令名称应该清楚表达业务意图
 
-## 相关文档
+## 在哪里可以找到相关文档？
 
 - [聚合开发指南](aggregate-development.md)
 - [仓储开发指南](repository-development.md)

@@ -1,10 +1,10 @@
 # 仓储开发指南
 
-## 概述
+## 什么是仓储？
 
 仓储模式封装了聚合根的持久化逻辑，提供类似集合的访问接口。本模板中仓储接口定义在基础设施层，实现也在基础设施层，遵循依赖倒置原则。
 
-## 重要设计原则
+## 仓储设计有哪些重要原则？
 
 - 每个聚合根对应一个仓储
 - 仓储接口和实现应放置在 `src/{ProjectName}.Infrastructure/Repositories/` 目录下
@@ -14,7 +14,7 @@
 - 仓储类会被自动注册到依赖注入容器中，无需手动注册
 - 默认基类已经实现了一组常用方法，如无必要，尽量不要定义新的仓储方法
 
-## 文件与目录
+## 仓储文件应该放在哪里？
 
 类文件命名应遵循以下规则：
 
@@ -22,7 +22,7 @@
 - 文件名格式为 `{AggregateName}Repository.cs`
 - 接口和实现在同一文件中
 
-## 开发规则
+## 如何定义仓储？
 
 仓储的定义应遵循以下规则：
 
@@ -33,7 +33,7 @@
 - 通过构造函数参数访问 `ApplicationDbContext`
 - 仓储会被自动注册到 DI 容器
 
-## 必要的using引用
+## 需要引用哪些命名空间？
 
 仓储文件中的必要引用已在GlobalUsings.cs中定义：
 
@@ -41,15 +41,13 @@
 
 因此在仓储文件中无需重复添加这些using语句。
 
-## DbContext访问说明
+## 如何访问DbContext？
 
 - 通过构造函数参数访问 `ApplicationDbContext`
 - 使用 `context.EntitySetName` 访问具体的DbSet
 - 基类没有提供公开的 `DbSet` 或 `Context` 属性
 
-## 代码示例
-
-### 基本仓储实现
+## 如何编写基本仓储？
 
 **文件**: `src/MyProject.Infrastructure/Repositories/UserRepository.cs`
 
@@ -95,7 +93,7 @@ public class UserRepository(ApplicationDbContext context)
 }
 ```
 
-### 带有复杂查询的仓储
+### 如何编写带有复杂查询的仓储？
 
 **文件**: `src/MyProject.Infrastructure/Repositories/OrderRepository.cs`
 
@@ -161,7 +159,7 @@ public class OrderRepository(ApplicationDbContext context)
 }
 ```
 
-### 带有关联实体加载的仓储
+### 如何编写带有关联实体加载的仓储？
 
 **文件**: `src/MyProject.Infrastructure/Repositories/ProductRepository.cs`
 
@@ -226,7 +224,7 @@ public class ProductRepository(ApplicationDbContext context)
 }
 ```
 
-## 框架默认实现的方法
+## 框架默认实现了哪些方法？
 
 框架已经实现了以下常用方法，无需额外实现：
 
@@ -264,7 +262,7 @@ public interface IRepository<TEntity, TKey> : IRepository<TEntity>
 }
 ```
 
-## 仓储方法命名约定
+## 如何命名仓储方法？
 
 ### 业务意图优先
 
@@ -285,7 +283,7 @@ Task<bool> CheckEmail(string email); // 不清楚返回值含义
 Task<List<Order>> Query(Expression<Func<Order, bool>> predicate); // 过于通用
 ```
 
-### 查询vs存在性检查
+### 查询vs存在性检查有什么区别？
 
 ```csharp
 // 查询方法 - 返回实体或实体列表
@@ -297,7 +295,7 @@ Task<bool> EmailExistsAsync(string email, CancellationToken cancellationToken);
 Task<bool> CodeExistsAsync(string code, CancellationToken cancellationToken);
 ```
 
-## 仓储使用场景
+## 什么场景应该使用仓储？
 
 ### ✅ 应该使用仓储的场景
 
@@ -362,9 +360,9 @@ public class GetOrderStatisticsQueryHandler(ApplicationDbContext context)
 }
 ```
 
-## 常见错误排查
+## 遇到常见错误怎么办？
 
-### 依赖注入错误
+### 为什么出现依赖注入错误？
 
 **错误**: `未能找到类型或命名空间名"IUserRepository"`
 
@@ -374,7 +372,7 @@ public class GetOrderStatisticsQueryHandler(ApplicationDbContext context)
 - 确保仓储接口定义在 Infrastructure 层
 - 在使用仓储的地方添加 `using {ProjectName}.Infrastructure.Repositories;`
 
-### 自动注册相关
+### 为什么仓储没有自动注册？
 
 **错误**: 仓储未注册到 DI 容器
 
@@ -384,7 +382,7 @@ public class GetOrderStatisticsQueryHandler(ApplicationDbContext context)
 - Infrastructure 层的 `AddRepositories()` 已自动注册所有仓储
 - 无需在 Program.cs 中手动注册仓储
 
-### 主构造函数警告
+### 为什么出现主构造函数警告？
 
 **警告**: `参数"ApplicationDbContext context"捕获到封闭类型状态，其值也传递给基构造函数`
 
@@ -411,7 +409,7 @@ public class UserRepository
 }
 ```
 
-## 最佳实践
+## 仓储开发有哪些最佳实践？
 
 1. **单一职责**: 每个仓储只负责一个聚合根
 2. **业务语言**: 使用业务领域的语言命名方法
@@ -420,7 +418,7 @@ public class UserRepository
 5. **最小化方法**: 只定义真正需要的方法，利用基类提供的默认方法
 6. **包含关联**: 需要关联实体时使用Include显式加载
 
-## 相关文档
+## 在哪里可以找到相关文档？
 
 - [聚合开发指南](aggregate-development.md)
 - [命令开发指南](command-development.md)

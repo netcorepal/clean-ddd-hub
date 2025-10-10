@@ -1,10 +1,10 @@
 # 领域事件开发指南
 
-## 概述
+## 什么是领域事件？
 
 领域事件表示在业务领域中发生的重要事情，用于实现聚合之间的协作通信。当聚合根的状态发生变化时，应该发布相应的领域事件。
 
-## 文件与目录
+## 领域事件文件应该放在哪里？
 
 类文件命名应遵循以下规则：
 
@@ -13,7 +13,7 @@
 - 文件名格式为 `{Aggregate}DomainEvents.cs`
 - 一个领域事件文件中可以包含多个领域事件
 
-## 开发规则
+## 如何定义领域事件？
 
 领域事件的定义应遵循以下规则：
 
@@ -24,7 +24,7 @@
 - 格式：`{Entity}{Action}DomainEvent`
 - 例如：`UserCreatedDomainEvent`、`OrderPaidDomainEvent`、`ProductUpdatedDomainEvent`
 
-## 领域事件发布时机
+## 什么时候应该发布领域事件？
 
 领域事件应该在以下时机发布：
 
@@ -33,9 +33,7 @@
 3. **业务规则执行**: 如用户激活、产品上架等
 4. **聚合删除**: 发布 `{Entity}DeletedDomainEvent`
 
-## 代码示例
-
-### 基本领域事件
+## 如何编写基本领域事件？
 
 **文件**: `src/MyProject.Domain/DomainEvents/UserDomainEvents.cs`
 
@@ -51,7 +49,7 @@ public record UserEmailChangedDomainEvent(User User) : IDomainEvent;
 public record UserDeletedDomainEvent(User User) : IDomainEvent;
 ```
 
-### 带有额外信息的领域事件
+### 如何编写带有额外信息的领域事件？
 
 **文件**: `src/MyProject.Domain/DomainEvents/OrderDomainEvents.cs`
 
@@ -86,7 +84,7 @@ public record OrderItemRemovedDomainEvent(
     OrderItemId ItemId) : IDomainEvent;
 ```
 
-### 复杂场景的领域事件
+### 如何编写复杂场景的领域事件？
 
 **文件**: `src/MyProject.Domain/DomainEvents/ProductDomainEvents.cs`
 
@@ -113,7 +111,7 @@ public record ProductPublishedDomainEvent(Product Product) : IDomainEvent;
 public record ProductUnpublishedDomainEvent(Product Product) : IDomainEvent;
 ```
 
-## 在聚合中发布领域事件
+## 如何在聚合中发布领域事件？
 
 ### 基本发布方式
 
@@ -156,7 +154,7 @@ public class User : Entity<UserId>, IAggregateRoot
 }
 ```
 
-### 带有额外信息的事件发布
+### 如何发布带有额外信息的事件？
 
 ```csharp
 public class Order : Entity<OrderId>, IAggregateRoot
@@ -214,7 +212,7 @@ public class Order : Entity<OrderId>, IAggregateRoot
 }
 ```
 
-### 复杂业务场景的事件发布
+### 如何在复杂业务场景中发布事件？
 
 ```csharp
 public class Product : Entity<ProductId>, IAggregateRoot
@@ -308,7 +306,7 @@ public class Product : Entity<ProductId>, IAggregateRoot
 }
 ```
 
-## 领域事件命名约定
+## 如何命名领域事件？
 
 ### 标准命名格式
 
@@ -320,7 +318,7 @@ public class Product : Entity<ProductId>, IAggregateRoot
 - ❌ `CreateUserDomainEvent` - 不应使用动词原形
 - ❌ `PayingOrderDomainEvent` - 不应使用进行时
 
-### 常见动词参考
+### 常用动词有哪些？
 
 - Created - 创建
 - Updated - 更新
@@ -335,11 +333,11 @@ public class Product : Entity<ProductId>, IAggregateRoot
 - Activated - 激活
 - Deactivated - 停用
 
-## 领域事件处理
+## 领域事件如何被处理？
 
 领域事件发布后，会被相应的领域事件处理器处理。关于如何编写领域事件处理器，请参考[领域事件处理器开发指南](domain-event-handler-development.md)。
 
-## 最佳实践
+## 领域事件有哪些最佳实践？
 
 ### 1. 事件粒度
 
@@ -378,9 +376,9 @@ public record OrderPaidDomainEvent(
     Customer Customer) : IDomainEvent;
 ```
 
-## 常见错误排查
+## 遇到常见问题怎么办？
 
-### 事件未发布
+### 为什么事件未发布？
 
 **问题**: 聚合状态变更了但事件未发布
 
@@ -388,7 +386,7 @@ public record OrderPaidDomainEvent(
 
 **解决**: 在所有重要的状态变更方法中添加事件发布代码
 
-### 事件重复发布
+### 为什么事件重复发布？
 
 **问题**: 同一个事件被发布多次
 
@@ -396,7 +394,7 @@ public record OrderPaidDomainEvent(
 
 **解决**: 确保每个业务操作只发布一次相应的事件
 
-### 事件处理异常
+### 为什么事件处理出现异常？
 
 **问题**: 事件处理器抛出异常导致事务回滚
 
@@ -404,7 +402,7 @@ public record OrderPaidDomainEvent(
 
 **解决**: 参考[领域事件处理器开发指南](domain-event-handler-development.md)正确实现事件处理
 
-## 相关文档
+## 在哪里可以找到相关文档？
 
 - [聚合开发指南](aggregate-development.md)
 - [领域事件处理器开发指南](domain-event-handler-development.md)

@@ -1,12 +1,12 @@
 # 聚合与强类型ID开发指南
 
-## 概述
+## 什么是聚合根？
 
 聚合根是 DDD 中的核心概念，代表一组相关对象的根实体，负责维护业务规则和数据一致性。在本模板中，所有聚合根都继承自 `Entity<TId>` 并实现 `IAggregateRoot` 接口。同时，本模板使用强类型ID提供类型安全，避免了不同实体ID之间的混淆。
 
-## 文件与目录
+## 聚合根文件应该放在哪里？
 
-类文件命名应遵循以下规则：
+聚合根文件应遵循以下组织规则：
 
 - 应放置在 `src/{ProjectName}.Domain/AggregatesModel/{AggregateName}Aggregate/` 目录下
 - 例如 `src/MyProject.Domain/AggregatesModel/UserAggregate/User.cs`
@@ -14,7 +14,7 @@
 - 聚合根类名与文件名一致
 - 强类型ID与聚合根定义在同一文件中
 
-## 强类型ID开发规则
+## 如何定义强类型ID？
 
 强类型ID的定义应遵循以下规则：
 
@@ -24,7 +24,7 @@
 - 与聚合/实体在同一个文件中定义
 - 命名格式为 `{EntityName}Id`
 
-## 聚合根开发规则
+## 如何定义聚合根？
 
 聚合根的定义应遵循以下规则：
 
@@ -38,7 +38,9 @@
 - 无需手动设置ID的值
 - RowVersion 属性用于乐观并发控制
 
-## 子实体的定义应遵循以下规则
+## 如何定义子实体？
+
+子实体的定义应遵循以下规则：
 
 - 必须是 `public` 类
 - 必须有一个无参构造器
@@ -46,9 +48,9 @@
 - 必须继承自 `Entity<TId>`，并实现 `IEntity` 接口
 - 聚合内允许多个子实体
 
-## 代码示例
+## 如何编写聚合根代码示例？
 
-### 聚合根示例
+### 基本聚合根示例
 
 文件: `src/MyProject.Domain/AggregatesModel/UserAggregate/User.cs`
 
@@ -92,7 +94,7 @@ public class User : Entity<UserId>, IAggregateRoot
 }
 ```
 
-### 带有子实体的聚合示例
+### 如何编写带有子实体的聚合？
 
 文件: `src/MyProject.Domain/AggregatesModel/OrderAggregate/Order.cs`
 
@@ -181,7 +183,7 @@ public enum OrderStatus
 }
 ```
 
-## 常见错误排查
+## 遇到领域事件引用错误怎么办？
 
 ### 领域事件引用错误
 
@@ -191,7 +193,7 @@ public enum OrderStatus
 
 **解决**: 在聚合根文件顶部添加 `using {ProjectName}.Domain.DomainEvents;`
 
-### ID手动赋值错误
+### 为什么会出现ID手动赋值错误？
 
 **错误**: 手动在构造函数中设置ID值
 
@@ -199,7 +201,7 @@ public enum OrderStatus
 
 **解决**: 移除ID赋值代码，让EF Core值生成器自动生成
 
-### 缺少无参构造器
+### 为什么会出现缺少无参构造器的错误？
 
 **错误**: EF Core无法实例化实体
 
@@ -207,7 +209,7 @@ public enum OrderStatus
 
 **解决**: 添加 `protected EntityName() { }` 构造器
 
-## 最佳实践
+## 聚合开发有哪些最佳实践？
 
 1. **业务逻辑封装**: 将所有业务逻辑放在聚合根的方法中，而不是在外部操作属性
 2. **不变性保护**: 使用 `private set` 确保只能通过业务方法修改状态
@@ -216,7 +218,7 @@ public enum OrderStatus
 5. **边界明确**: 每个聚合应该有明确的业务边界，避免过大的聚合
 6. **子实体管理**: 子实体应该通过聚合根的方法来添加、修改和删除
 
-## 相关文档
+## 在哪里可以找到相关文档？
 
 - [领域事件开发指南](domain-event-development.md)
 - [实体配置指南](entity-configuration.md)

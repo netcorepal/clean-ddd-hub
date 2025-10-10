@@ -1,10 +1,10 @@
 # 查询开发指南
 
-## 概述
+## 什么是查询？
 
 查询负责数据检索，遵循CQRS模式。查询应该是无副作用的，只读取数据不修改状态。本模板使用 MediatR 库实现查询处理，所有查询处理器会被框架自动注册。
 
-## 重要设计原则
+## 查询与仓储有什么区别？
 
 **查询 vs 仓储的职责分离：**
 
@@ -18,7 +18,7 @@
 - 查询可以使用投影(Projection)和匿名类型优化性能
 - 避免在查询中调用仓储方法
 
-## 文件与目录
+## 查询文件应该放在哪里？
 
 类文件命名应遵循以下规则：
 
@@ -26,7 +26,7 @@
 - 查询文件名格式为 `{Action}{Entity}Query.cs`
 - 查询、验证器、处理器和DTO定义在同一文件中
 
-## 开发规则
+## 如何定义查询？
 
 查询的定义应遵循以下规则：
 
@@ -36,9 +36,9 @@
 - 使用 `record` 类型定义查询和DTO
 - 直接使用ApplicationDbContext进行数据访问
 
-## 查询处理器最佳实践
+## 查询处理器有哪些最佳实践？
 
-### 数据访问
+### 如何访问数据？
 
 - **直接访问DbContext**: 查询处理器应直接注入和使用ApplicationDbContext
 - **避免使用仓储**: 仓储方法仅用于命令处理器的业务操作
@@ -47,14 +47,14 @@
 - **正确的取消令牌传递**: 将CancellationToken传递给所有异步操作
 - **只读操作**: 查询不应修改任何数据状态
 
-### 条件查询最佳实践
+### 条件查询有什么最佳实践？
 
 - **使用WhereIf**: 根据条件动态添加过滤条件，避免繁琐的if-else判断
 - **使用OrderByIf/ThenByIf**: 根据参数动态排序，支持多字段排序
 - **使用ToPagedDataAsync**: 自动处理分页逻辑，返回完整的分页信息
 - **确保默认排序**: 在动态排序时始终提供默认排序字段，确保结果稳定性
 
-## 必要的using引用
+## 需要引用哪些命名空间？
 
 查询文件中的必要引用已在GlobalUsings.cs中定义：
 
@@ -69,7 +69,7 @@
 using Microsoft.EntityFrameworkCore; // 用于EF Core扩展方法(FirstOrDefaultAsync, ToListAsync等)
 ```
 
-## 代码示例
+## 如何编写单个对象查询？
 
 ### 单个对象查询示例
 
@@ -112,7 +112,7 @@ public class GetUserQueryHandler(ApplicationDbContext context)
 public record UserDto(UserId Id, string Name, string Email);
 ```
 
-### 分页查询示例
+### 如何编写分页查询？
 
 **文件**: `src/MyProject.Web/Application/Queries/User/GetUserListQuery.cs`
 
@@ -178,7 +178,7 @@ public class GetUserListQueryHandler(ApplicationDbContext context)
 public record UserListItemDto(UserId Id, string Name, string Email);
 ```
 
-### 跨聚合查询示例
+### 如何编写跨聚合查询？
 
 **文件**: `src/MyProject.Web/Application/Queries/Order/GetOrderDetailQuery.cs`
 
@@ -243,9 +243,9 @@ public record OrderItemDto(
     int Quantity);
 ```
 
-## 框架扩展方法
+## 框架提供了哪些扩展方法？
 
-### WhereIf - 条件过滤
+### WhereIf - 如何条件过滤？
 
 使用 `WhereIf` 方法可以根据条件动态添加 Where 子句，避免编写冗长的条件判断代码：
 
@@ -267,7 +267,7 @@ var query = context.Users
     .WhereIf(isActive.HasValue, x => x.IsActive == isActive!.Value);
 ```
 
-### OrderByIf / ThenByIf - 条件排序
+### OrderByIf / ThenByIf - 如何条件排序？
 
 使用 `OrderByIf` 和 `ThenByIf` 方法可以根据条件动态添加排序：
 
@@ -285,7 +285,7 @@ var orderedQuery = context.Users
 // - desc: 可选参数，是否降序排序，默认为 false（升序）
 ```
 
-### ToPagedDataAsync - 分页数据
+### ToPagedDataAsync - 如何处理分页数据？
 
 使用 `ToPagedDataAsync` 方法可以自动处理分页逻辑，返回 `PagedData<T>` 类型：
 
@@ -307,7 +307,7 @@ var pagedResult = await query
 // - PageSize: int - 每页大小
 ```
 
-## 完整的分页查询示例
+## 如何编写完整的分页查询？
 
 ```csharp
 public class GetProductListQueryHandler(ApplicationDbContext context) 
@@ -346,15 +346,15 @@ public class GetProductListQueryHandler(ApplicationDbContext context)
 }
 ```
 
-## 强类型ID处理
+## 如何处理强类型ID？
 
 - 在查询和DTO中直接使用强类型ID类型，如 `UserId`、`OrderId`
 - 避免使用 `.Value` 属性访问内部值
 - 依赖框架的隐式转换处理类型转换
 
-## 常见错误排查
+## 遇到常见错误怎么办？
 
-### Entity Framework 扩展方法错误
+### 为什么Entity Framework扩展方法报错？
 
 **错误**: `IQueryable<T>"未包含"CountAsync"的定义`  
 **错误**: `IQueryable<T>"未包含"ToListAsync"的定义`  
@@ -364,7 +364,7 @@ public class GetProductListQueryHandler(ApplicationDbContext context)
 
 **解决**: 在查询文件中添加 `using Microsoft.EntityFrameworkCore;`
 
-### DbContext 访问错误
+### 为什么会出现DbContext访问错误？
 
 **错误**: 在查询处理器中使用仓储方法
 
@@ -375,7 +375,7 @@ public class GetProductListQueryHandler(ApplicationDbContext context)
 - 使用 `context.EntitySetName` 直接访问数据
 - 避免调用仓储方法
 
-### 框架扩展方法错误
+### 为什么框架扩展方法找不到？
 
 **错误**: `IQueryable<T>"未包含"WhereIf"的定义`  
 **错误**: `IQueryable<T>"未包含"OrderByIf"的定义`  
@@ -385,7 +385,7 @@ public class GetProductListQueryHandler(ApplicationDbContext context)
 
 **解决**: 确保 `global using NetCorePal.Extensions.AspNetCore;` 已在GlobalUsings.cs中定义
 
-## 最佳实践
+## 查询开发有哪些最佳实践？
 
 1. **投影优化**: 使用 `Select()` 投影避免查询不需要的字段
 2. **条件过滤**: 合理使用 `WhereIf()` 进行条件过滤
@@ -395,7 +395,7 @@ public class GetProductListQueryHandler(ApplicationDbContext context)
 6. **只读查询**: 查询不应修改数据状态
 7. **直接访问**: 直接使用DbContext，不通过仓储
 
-## 相关文档
+## 在哪里可以找到相关文档？
 
 - [命令开发指南](command-development.md)
 - [DTO设计最佳实践](../best-practices/dto-design.md)
