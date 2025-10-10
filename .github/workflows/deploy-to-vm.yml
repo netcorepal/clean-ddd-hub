@@ -3,7 +3,7 @@ name: Deploy to Azure VM
 on:
   push:
     branches:
-      - main  # 在推送到 main 分支时触发部署
+      - mainxxx  # 在推送到 main 分支时触发部署
 
 jobs:
   deploy:
