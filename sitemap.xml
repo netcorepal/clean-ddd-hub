@@ -65,6 +65,26 @@
          <lastmod>2025-10-10</lastmod>
     </url>
     <url>
+         <loc>https://docs.cleanddd.com/development-guide/aggregate-development/</loc>
+         <lastmod>2025-10-10</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleanddd.com/development-guide/command-development/</loc>
+         <lastmod>2025-10-10</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleanddd.com/development-guide/domain-event-development/</loc>
+         <lastmod>2025-10-10</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleanddd.com/development-guide/query-development/</loc>
+         <lastmod>2025-10-10</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleanddd.com/development-guide/repository-development/</loc>
+         <lastmod>2025-10-10</lastmod>
+    </url>
+    <url>
          <loc>https://docs.cleanddd.com/getting-started/quick-start/</loc>
          <lastmod>2025-10-10</lastmod>
     </url>

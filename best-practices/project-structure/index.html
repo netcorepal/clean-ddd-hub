@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://docs.cleanddd.com/best-practices/project-structure/">
       
       
-        <link rel="prev" href="../../architecture/event-driven/">
+        <link rel="prev" href="../../development-guide/repository-development/">
       
       
         <link rel="next" href="../naming-conventions/">
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#project-structure" class="md-skip">
+        <a href="#_1" class="md-skip">
           跳转至
         </a>
       
@@ -279,6 +279,26 @@
   
   
   架构设计
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../development-guide/aggregate-development/" class="md-tabs__link">
+          
+  
+  
+  开发指南
 
         </a>
       </li>
@@ -865,6 +885,173 @@
       
   
   
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    开发指南
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            开发指南
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../development-guide/aggregate-development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    聚合与实体开发
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../development-guide/command-development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    命令开发
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../development-guide/query-development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    查询开发
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../development-guide/domain-event-development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    领域事件开发
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../development-guide/repository-development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    仓储开发
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -886,10 +1073,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
             
   
   
@@ -902,8 +1089,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_5">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             最佳实践
           </label>
@@ -925,6 +1112,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    项目结构
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -936,6 +1136,352 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      为什么项目结构很重要？
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      标准项目结构是什么样的？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="标准项目结构是什么样的？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      整体结构
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      分层依赖关系是怎样的？
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#domain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Domain层（领域层）如何组织？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Domain层（领域层）如何组织？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      目录结构
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      职责说明
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#infrastructure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Infrastructure层（基础设施层）如何组织？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Infrastructure层（基础设施层）如何组织？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      目录结构
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      职责说明
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web" class="md-nav__link">
+    <span class="md-ellipsis">
+      Web层（表现层）如何组织？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Web层（表现层）如何组织？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      目录结构
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      职责说明
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test层（测试项目）如何组织？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Test层（测试项目）如何组织？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      目录结构
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      如何命名文件和命名空间？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="如何命名文件和命名空间？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      文件命名
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      命名空间应该怎么组织？
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      如何进行模块化组织？
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      项目结构有哪些最佳实践？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="项目结构有哪些最佳实践？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 保持层次清晰
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 按功能组织
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 保持一致性
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 适度分离
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-globalusings" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 使用GlobalUsings
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      项目结构常见问题有哪些？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="项目结构常见问题有哪些？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#q-infrastructuredomain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: 为什么仓储放在Infrastructure而不是Domain？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: 什么时候应该创建新的聚合？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: 如何处理跨聚合的查询？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-dto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: 应该在哪里放置DTO？
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      在哪里可以找到相关文档？
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1040,10 +1586,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
             
   
   
@@ -1056,8 +1602,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             开发工具
           </label>
@@ -1159,6 +1705,341 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      为什么项目结构很重要？
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      标准项目结构是什么样的？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="标准项目结构是什么样的？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      整体结构
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      分层依赖关系是怎样的？
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#domain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Domain层（领域层）如何组织？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Domain层（领域层）如何组织？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      目录结构
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      职责说明
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#infrastructure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Infrastructure层（基础设施层）如何组织？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Infrastructure层（基础设施层）如何组织？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      目录结构
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      职责说明
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web" class="md-nav__link">
+    <span class="md-ellipsis">
+      Web层（表现层）如何组织？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Web层（表现层）如何组织？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      目录结构
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      职责说明
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test层（测试项目）如何组织？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Test层（测试项目）如何组织？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      目录结构
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      如何命名文件和命名空间？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="如何命名文件和命名空间？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      文件命名
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      命名空间应该怎么组织？
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      如何进行模块化组织？
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      项目结构有哪些最佳实践？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="项目结构有哪些最佳实践？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 保持层次清晰
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 按功能组织
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 保持一致性
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 适度分离
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-globalusings" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 使用GlobalUsings
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      项目结构常见问题有哪些？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="项目结构常见问题有哪些？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#q-infrastructuredomain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: 为什么仓储放在Infrastructure而不是Domain？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: 什么时候应该创建新的聚合？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: 如何处理跨聚合的查询？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-dto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: 应该在哪里放置DTO？
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      在哪里可以找到相关文档？
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1173,8 +2054,274 @@
 
 
 
-<h1 id="project-structure">Project Structure</h1>
-<p><em>(内容待补充)</em></p>
+<h1 id="_1">项目结构最佳实践</h1>
+<h2 id="_2">为什么项目结构很重要？</h2>
+<p>良好的项目结构是DDD和Clean Architecture成功实施的基础。本文档描述了推荐的项目组织方式，遵循分层架构和关注点分离原则。</p>
+<h2 id="_3">标准项目结构是什么样的？</h2>
+<h3 id="_4">整体结构</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>MyProject.sln
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>├── src/
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>│   ├── MyProject.Domain/           # 领域层 - 核心业务逻辑
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>│   ├── MyProject.Infrastructure/   # 基础设施层 - 数据访问和外部服务
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>│   └── MyProject.Web/             # 表现层 - API和应用服务
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>└── test/                          # 测试项目
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    ├── MyProject.Domain.UnitTests/
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    ├── MyProject.Infrastructure.UnitTests/
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    └── MyProject.Web.UnitTests/
+</code></pre></div>
+<h3 id="_5">分层依赖关系是怎样的？</h3>
+<p><strong>严格单向依赖：</strong> Web → Infrastructure → Domain</p>
+<ul>
+<li>Domain 层不依赖任何其他层</li>
+<li>Infrastructure 层依赖 Domain 层</li>
+<li>Web 层依赖 Infrastructure 和 Domain 层</li>
+<li>测试项目可以依赖对应的被测项目</li>
+</ul>
+<h2 id="domain">Domain层（领域层）如何组织？</h2>
+<h3 id="_6">目录结构</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>MyProject.Domain/
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>├── AggregatesModel/                    # 聚合模型
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>│   ├── UserAggregate/                  # 用户聚合
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>│   │   ├── User.cs                     # 聚合根 + 强类型ID
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>│   │   └── UserRole.cs                 # 子实体（如果有）
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>│   ├── OrderAggregate/                 # 订单聚合
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>│   │   ├── Order.cs                    # 聚合根 + 强类型ID
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>│   │   ├── OrderItem.cs                # 订单项子实体
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>│   │   └── OrderStatus.cs              # 订单状态枚举
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>│   └── ProductAggregate/               # 产品聚合
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>│       ├── Product.cs                  # 聚合根
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>│       └── ProductReview.cs            # 产品评论子实体
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>├── DomainEvents/                       # 领域事件
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>│   ├── UserDomainEvents.cs             # 用户相关领域事件
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>│   ├── OrderDomainEvents.cs            # 订单相关领域事件
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>│   └── ProductDomainEvents.cs          # 产品相关领域事件
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>├── DomainServices/                     # 领域服务（可选）
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>│   └── PricingService.cs               # 定价服务
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>├── Exceptions/                         # 领域异常（可选）
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>│   └── DomainException.cs
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>└── GlobalUsings.cs                     # 全局using引用
+</code></pre></div>
+<h3 id="_7">职责说明</h3>
+<p><strong>AggregatesModel（聚合模型）</strong>:
+- 包含所有聚合根、实体、值对象
+- 每个聚合独立文件夹
+- 聚合根包含强类型ID定义
+- 包含业务规则和不变性</p>
+<p><strong>DomainEvents（领域事件）</strong>:
+- 定义领域中发生的重要事件
+- 按聚合分组组织
+- 使用过去式命名</p>
+<p><strong>DomainServices（领域服务）</strong>:
+- 不属于任何特定实体的业务逻辑
+- 跨聚合的复杂业务规则</p>
+<h2 id="infrastructure">Infrastructure层（基础设施层）如何组织？</h2>
+<h3 id="_8">目录结构</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>MyProject.Infrastructure/
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>├── Repositories/                       # 仓储实现
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>│   ├── UserRepository.cs               # 用户仓储接口+实现
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>│   ├── OrderRepository.cs              # 订单仓储接口+实现
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>│   └── ProductRepository.cs            # 产品仓储接口+实现
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>├── EntityConfigurations/               # EF Core实体配置
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>│   ├── UserEntityConfiguration.cs      # 用户实体配置
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>│   ├── OrderEntityConfiguration.cs     # 订单实体配置
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>│   └── ProductEntityConfiguration.cs   # 产品实体配置
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>├── Migrations/                         # 数据库迁移
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>│   └── 20240101000000_InitialCreate.cs
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>├── ApplicationDbContext.cs             # 数据库上下文
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>├── DesignTimeDbContextFactory.cs       # 设计时工厂
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>└── GlobalUsings.cs                     # 全局using引用
+</code></pre></div>
+<h3 id="_9">职责说明</h3>
+<p><strong>Repositories（仓储）</strong>:
+- 封装数据访问逻辑
+- 接口和实现在同一文件
+- 提供业务导向的查询方法</p>
+<p><strong>EntityConfigurations（实体配置）</strong>:
+- EF Core的实体映射配置
+- 表名、字段、关系配置
+- 索引和约束定义</p>
+<p><strong>ApplicationDbContext</strong>:
+- 管理所有DbSet
+- 配置实体映射
+- 处理领域事件发布</p>
+<h2 id="web">Web层（表现层）如何组织？</h2>
+<h3 id="_10">目录结构</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>MyProject.Web/
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>├── Application/                        # 应用服务层
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>│   ├── Commands/                       # 命令
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>│   │   ├── User/
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>│   │   │   ├── CreateUserCommand.cs
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>│   │   │   ├── UpdateUserCommand.cs
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>│   │   │   └── DeleteUserCommand.cs
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>│   │   ├── Order/
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>│   │   │   ├── CreateOrderCommand.cs
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>│   │   │   └── PayOrderCommand.cs
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>│   │   └── Product/
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>│   │       └── CreateProductCommand.cs
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>│   ├── Queries/                        # 查询
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>│   │   ├── User/
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>│   │   │   ├── GetUserQuery.cs
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>│   │   │   └── GetUserListQuery.cs
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>│   │   ├── Order/
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>│   │   │   ├── GetOrderQuery.cs
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>│   │   │   └── GetOrderListQuery.cs
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>│   │   └── Product/
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>│   │       └── GetProductListQuery.cs
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>│   ├── DomainEventHandlers/            # 领域事件处理器
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>│   │   ├── UserCreatedDomainEventHandlerForNotification.cs
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>│   │   └── OrderPaidDomainEventHandlerForDelivery.cs
+<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>│   ├── IntegrationEvents/              # 集成事件
+<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>│   │   ├── UserCreatedIntegrationEvent.cs
+<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>│   │   └── OrderCreatedIntegrationEvent.cs
+<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>│   ├── IntegrationEventHandlers/       # 集成事件处理器
+<a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>│   │   └── PaymentCompletedIntegrationEventHandler.cs
+<a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>│   └── Dtos/                           # 数据传输对象（可选）
+<a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>│       └── UserDto.cs
+<a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a>├── Endpoints/                          # FastEndpoints端点
+<a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a>│   ├── User/
+<a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a>│   │   ├── CreateUserEndpoint.cs
+<a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a>│   │   ├── UpdateUserEndpoint.cs
+<a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a>│   │   └── GetUserEndpoint.cs
+<a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a>│   └── Order/
+<a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a>│       ├── CreateOrderEndpoint.cs
+<a id="__codelineno-3-39" name="__codelineno-3-39" href="#__codelineno-3-39"></a>│       └── GetOrderEndpoint.cs
+<a id="__codelineno-3-40" name="__codelineno-3-40" href="#__codelineno-3-40"></a>├── Middlewares/                        # 中间件
+<a id="__codelineno-3-41" name="__codelineno-3-41" href="#__codelineno-3-41"></a>│   └── ExceptionHandlingMiddleware.cs
+<a id="__codelineno-3-42" name="__codelineno-3-42" href="#__codelineno-3-42"></a>├── Program.cs                          # 应用程序入口
+<a id="__codelineno-3-43" name="__codelineno-3-43" href="#__codelineno-3-43"></a>├── appsettings.json                    # 配置文件
+<a id="__codelineno-3-44" name="__codelineno-3-44" href="#__codelineno-3-44"></a>└── GlobalUsings.cs                     # 全局using引用
+</code></pre></div>
+<h3 id="_11">职责说明</h3>
+<p><strong>Commands（命令）</strong>:
+- 表示修改系统状态的操作
+- 包含命令、验证器和处理器
+- 按功能模块组织</p>
+<p><strong>Queries（查询）</strong>:
+- 表示读取数据的操作
+- 直接访问DbContext
+- 返回DTO而非实体</p>
+<p><strong>DomainEventHandlers（领域事件处理器）</strong>:
+- 处理领域事件
+- 实现跨聚合协作
+- 可以有多个处理器处理同一事件</p>
+<p><strong>IntegrationEvents（集成事件）</strong>:
+- 跨服务通信的事件
+- 不包含领域对象引用</p>
+<p><strong>Endpoints（端点）</strong>:
+- RESTful API端点
+- 使用FastEndpoints框架
+- 负责HTTP请求/响应处理</p>
+<h2 id="test">Test层（测试项目）如何组织？</h2>
+<h3 id="_12">目录结构</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>test/
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>├── MyProject.Domain.UnitTests/         # 领域层单元测试
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>│   ├── UserTests.cs                    # 用户聚合测试
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>│   ├── OrderTests.cs                   # 订单聚合测试
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>│   └── ProductTests.cs                 # 产品聚合测试
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>├── MyProject.Infrastructure.UnitTests/ # 基础设施层测试
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>│   ├── UserRepositoryTests.cs
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>│   └── OrderRepositoryTests.cs
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>└── MyProject.Web.UnitTests/           # Web层单元测试
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>    ├── Commands/
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>    │   └── CreateUserCommandHandlerTests.cs
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>    ├── Queries/
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>    │   └── GetUserQueryHandlerTests.cs
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>    └── Endpoints/
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>        └── CreateUserEndpointTests.cs
+</code></pre></div>
+<h2 id="_13">如何命名文件和命名空间？</h2>
+<h3 id="_14">文件命名</h3>
+<ul>
+<li><strong>聚合根</strong>: <code>{EntityName}.cs</code>（如 <code>User.cs</code>, <code>Order.cs</code>）</li>
+<li><strong>强类型ID</strong>: 与聚合根在同一文件中</li>
+<li><strong>领域事件</strong>: <code>{Entity}{Action}DomainEvent.cs</code>（如 <code>UserCreatedDomainEvent</code>）</li>
+<li><strong>命令</strong>: <code>{Action}{Entity}Command.cs</code>（如 <code>CreateUserCommand.cs</code>）</li>
+<li><strong>查询</strong>: <code>{Action}{Entity}Query.cs</code>（如 <code>GetUserListQuery.cs</code>）</li>
+<li><strong>仓储</strong>: <code>{Entity}Repository.cs</code>（如 <code>UserRepository.cs</code>）</li>
+<li><strong>实体配置</strong>: <code>{Entity}EntityConfiguration.cs</code></li>
+</ul>
+<h3 id="_15">命名空间应该怎么组织？</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1">// Domain层</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">MyProject</span><span class="p">.</span><span class="n">Domain</span><span class="p">.</span><span class="n">AggregatesModel</span><span class="p">.</span><span class="n">UserAggregate</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="n">MyProject</span><span class="p">.</span><span class="n">Domain</span><span class="p">.</span><span class="n">DomainEvents</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="c1">// Infrastructure层</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="n">MyProject</span><span class="p">.</span><span class="n">Infrastructure</span><span class="p">.</span><span class="n">Repositories</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="n">MyProject</span><span class="p">.</span><span class="n">Infrastructure</span><span class="p">.</span><span class="n">EntityConfigurations</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="c1">// Web层</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="n">MyProject</span><span class="p">.</span><span class="n">Web</span><span class="p">.</span><span class="n">Application</span><span class="p">.</span><span class="n">Commands</span><span class="p">.</span><span class="n">User</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="n">MyProject</span><span class="p">.</span><span class="n">Web</span><span class="p">.</span><span class="n">Application</span><span class="p">.</span><span class="n">Queries</span><span class="p">.</span><span class="n">User</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="n">MyProject</span><span class="p">.</span><span class="n">Web</span><span class="p">.</span><span class="n">Application</span><span class="p">.</span><span class="n">DomainEventHandlers</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="n">MyProject</span><span class="p">.</span><span class="n">Web</span><span class="p">.</span><span class="n">Endpoints</span><span class="p">.</span><span class="n">User</span>
+</code></pre></div>
+<h2 id="_16">如何进行模块化组织？</h2>
+<p>对于大型项目，可以按业务模块组织：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>MyProject.Web/
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>├── Application/
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>│   ├── User/                          # 用户模块
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>│   │   ├── Commands/
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>│   │   ├── Queries/
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>│   │   └── DomainEventHandlers/
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>│   ├── Order/                         # 订单模块
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>│   │   ├── Commands/
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>│   │   ├── Queries/
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>│   │   └── DomainEventHandlers/
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>│   └── Product/                       # 产品模块
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>│       ├── Commands/
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>│       └── Queries/
+</code></pre></div>
+<h2 id="_17">项目结构有哪些最佳实践？</h2>
+<h3 id="1">1. 保持层次清晰</h3>
+<ul>
+<li>严格遵守依赖方向</li>
+<li>避免循环依赖</li>
+<li>Domain层保持纯净，不依赖外部框架</li>
+</ul>
+<h3 id="2">2. 按功能组织</h3>
+<ul>
+<li>相关的代码放在一起</li>
+<li>按业务模块而非技术层次组织</li>
+<li>降低认知负担</li>
+</ul>
+<h3 id="3">3. 保持一致性</h3>
+<ul>
+<li>统一的命名约定</li>
+<li>统一的文件组织方式</li>
+<li>团队成员易于理解和导航</li>
+</ul>
+<h3 id="4">4. 适度分离</h3>
+<ul>
+<li>不要过度细分</li>
+<li>避免一个文件一个类（除非必要）</li>
+<li>相关的小类可以放在一个文件中</li>
+</ul>
+<h3 id="5-globalusings">5. 使用GlobalUsings</h3>
+<ul>
+<li>减少重复的using语句</li>
+<li>提高代码可读性</li>
+<li>在每个项目中定义GlobalUsings.cs</li>
+</ul>
+<h2 id="_18">项目结构常见问题有哪些？</h2>
+<h3 id="q-infrastructuredomain">Q: 为什么仓储放在Infrastructure而不是Domain？</h3>
+<p>A: 虽然仓储接口在概念上属于Domain，但在实践中，将接口和实现都放在Infrastructure层可以简化依赖关系，因为仓储的实现总是依赖具体的持久化技术（如EF Core）。</p>
+<h3 id="q">Q: 什么时候应该创建新的聚合？</h3>
+<p>A: 当一组实体：
+1. 有明确的业务边界
+2. 需要保证事务一致性
+3. 可以独立存在和演化</p>
+<h3 id="q_1">Q: 如何处理跨聚合的查询？</h3>
+<p>A: 在查询处理器中直接使用DbContext进行跨聚合查询，这是读模型，不需要经过聚合根。</p>
+<h3 id="q-dto">Q: 应该在哪里放置DTO？</h3>
+<p>A: DTO可以和查询或命令放在一起，也可以放在独立的Dtos文件夹中。推荐与查询放在一起，因为它们通常是为查询服务的。</p>
+<h2 id="_19">在哪里可以找到相关文档？</h2>
+<ul>
+<li><a href="../../development-guide/aggregate-development/">聚合开发指南</a></li>
+<li><a href="../../development-guide/command-development/">命令开发指南</a></li>
+<li><a href="../../development-guide/query-development/">查询开发指南</a></li>
+<li><a href="../../development-guide/repository-development/">仓储开发指南</a></li>
+<li><a href="../naming-conventions/">命名规范</a></li>
+</ul>
 
 
 
