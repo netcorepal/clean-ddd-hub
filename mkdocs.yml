@@ -68,6 +68,12 @@ nav:
       - 整洁架构: architecture/clean-architecture.md
       - CQRS模式: architecture/cqrs.md
       - 事件驱动架构: architecture/event-driven.md
+  - 开发指南:
+      - 聚合与实体开发: development-guide/aggregate-development.md
+      - 命令开发: development-guide/command-development.md
+      - 查询开发: development-guide/query-development.md
+      - 领域事件开发: development-guide/domain-event-development.md
+      - 仓储开发: development-guide/repository-development.md
   - 最佳实践:
       - 项目结构: best-practices/project-structure.md
       - 命名规范: best-practices/naming-conventions.md
