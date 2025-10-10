@@ -1,8 +1,8 @@
-# 欢迎来到 Clean DDD Hub 知识库
+# 欢迎来到 CleanDDD 知识库
 
 ## 关于本知识库
 
-Clean DDD Hub 知识库致力于帮助开发者理解和实践领域驱动设计(Domain-Driven Design)和整洁架构(Clean Architecture)。无论你是刚接触这些概念的新手，还是希望深入了解最佳实践的经验开发者，这里都能找到你需要的内容。
+CleanDDD 知识库致力于帮助开发者理解和实践领域驱动设计(Domain-Driven Design)和整洁架构(Clean Architecture)。无论你是刚接触这些概念的新手，还是希望深入了解最佳实践的经验开发者，这里都能找到你需要的内容。
 
 ## 快速导航
 
