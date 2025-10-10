@@ -8,9 +8,9 @@ const Knowledge = () => {
   
   useEffect(() => {
     // Redirect to MkDocs knowledge base
-    // When deployed, this will be available at /clean-ddd-hub/ (GitHub Pages)
+    // Custom domain: docs.cleanddd.com
     const docsUrl = import.meta.env.PROD 
-      ? "https://netcorepal.github.io/clean-ddd-hub/"
+      ? "https://docs.cleanddd.com/"
       : "/docs";
     
     // Small delay to show loading message
@@ -33,7 +33,7 @@ const Knowledge = () => {
           <p className="text-sm text-gray-500 mt-4">
             如果没有自动跳转，请点击{" "}
             <a 
-              href="https://netcorepal.github.io/clean-ddd-hub/" 
+              href="https://docs.cleanddd.com/" 
               className="text-ddd-600 hover:text-ddd-800 underline"
             >
               这里
