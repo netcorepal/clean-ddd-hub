@@ -1,6 +1,6 @@
-# Clean DDD Hub
+# CleanDDD
 
-Clean DDD Hub is a community platform for Domain-Driven Design (DDD) and Clean Architecture enthusiasts.
+CleanDDD is a community platform for Domain-Driven Design (DDD) and Clean Architecture enthusiasts.
 
 ## Features
 
