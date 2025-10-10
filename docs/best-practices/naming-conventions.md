@@ -1,12 +1,12 @@
 # 命名规范
 
-## 概述
+## 为什么需要命名规范？
 
 统一的命名规范可以提高代码的可读性和可维护性，使团队成员更容易理解代码意图。本文档定义了在DDD和Clean Architecture项目中的命名约定。
 
-## 通用命名原则
+## 通用命名有哪些原则？
 
-### 1. 使用有意义的名称
+### 1. 如何使用有意义的名称？
 
 - 名称应该清楚地表达其用途
 - 避免使用缩写（除非是广为人知的）
@@ -24,7 +24,7 @@ public string GetName() { }
 private decimal Calc() { }
 ```
 
-### 2. 使用一致的词汇
+### 2. 如何保持词汇一致性？
 
 在整个项目中使用相同的词汇表达相同的概念：
 
@@ -32,7 +32,7 @@ private decimal Calc() { }
 - 如果使用"Order"，就不要在其他地方使用"Purchase"
 - 遵循Ubiquitous Language（统一语言）
 
-### 3. 避免噪音词
+### 3. 为什么要避免噪音词？
 
 避免使用没有实际意义的词汇：
 
@@ -44,9 +44,9 @@ UserData, UserInfo, UserManager, UserHelper
 User, UserService, UserValidator
 ```
 
-## C# 命名约定
+## C#中如何命名？
 
-### Pascal命名法 (PascalCase)
+### 什么时候使用Pascal命名法？
 
 用于：
 - 类名
@@ -67,7 +67,7 @@ public event EventHandler UserCreated;
 namespace MyProject.Domain.AggregatesModel { }
 ```
 
-### Camel命名法 (camelCase)
+### 什么时候使用Camel命名法？
 
 用于：
 - 局部变量
@@ -84,9 +84,9 @@ public void ProcessOrder(string customerName, decimal totalAmount)
 private readonly IUserRepository _userRepository;
 ```
 
-## 项目和命名空间
+## 如何命名项目和命名空间？
 
-### 项目命名
+### 项目如何命名？
 
 格式：`{CompanyName}.{ProjectName}.{Layer}`
 
@@ -96,7 +96,7 @@ MyCompany.OrderSystem.Infrastructure
 MyCompany.OrderSystem.Web
 ```
 
-### 命名空间命名
+### 命名空间如何命名？
 
 遵循项目结构：
 
@@ -109,9 +109,9 @@ namespace MyProject.Web.Application.Queries.Order;
 namespace MyProject.Web.Endpoints.User;
 ```
 
-## DDD 特定命名
+## DDD中如何命名？
 
-### 聚合根
+### 聚合根如何命名？
 
 - 使用领域中的名词
 - 不需要添加"Aggregate"后缀
@@ -128,7 +128,7 @@ public class UserAggregate : Entity<UserId>, IAggregateRoot { }
 public class OrderRoot : Entity<OrderId>, IAggregateRoot { }
 ```
 
-### 强类型ID
+### 强类型ID如何命名？
 
 格式：`{EntityName}Id`
 
@@ -149,7 +149,7 @@ public class Address : Entity<AddressId>, IEntity { }
 public class ContactInfo : Entity<ContactInfoId>, IEntity { }
 ```
 
-### 值对象
+### 值对象如何命名？
 
 - 使用描述性名词
 - 通常不需要"ValueObject"后缀
@@ -177,7 +177,7 @@ public record CreateUserEvent(User User) : IDomainEvent;
 public record PayingOrderEvent(Order Order) : IDomainEvent;
 ```
 
-### 领域服务
+### 领域服务如何命名？
 
 格式：`{Domain}{Action}Service` 或 `{Domain}Service`
 
@@ -187,9 +187,9 @@ public class ShippingCalculationService { }
 public class InventoryService { }
 ```
 
-## CQRS 命名
+## CQRS中如何命名？
 
-### 命令
+### 命令如何命名？
 
 格式：`{Action}{Entity}Command`
 
@@ -207,7 +207,7 @@ public record UserCreateCommand(...) : ICommand<UserId>;
 public record CreatingUserCommand(...) : ICommand<UserId>;
 ```
 
-### 命令处理器
+### 命令处理器如何命名？
 
 格式：`{CommandName}Handler`
 
@@ -216,7 +216,7 @@ public class CreateUserCommandHandler : ICommandHandler<CreateUserCommand, UserI
 public class UpdateUserEmailCommandHandler : ICommandHandler<UpdateUserEmailCommand> { }
 ```
 
-### 命令验证器
+### 命令验证器如何命名？
 
 格式：`{CommandName}Validator`
 
@@ -235,7 +235,7 @@ public record GetUserListQuery(int PageIndex, int PageSize) : IQuery<PagedData<U
 public record GetOrderDetailQuery(OrderId OrderId) : IQuery<OrderDetailDto>;
 ```
 
-### 查询处理器
+### 查询处理器如何命名？
 
 格式：`{QueryName}Handler`
 
@@ -244,7 +244,7 @@ public class GetUserQueryHandler : IQueryHandler<GetUserQuery, UserDto> { }
 public class GetUserListQueryHandler : IQueryHandler<GetUserListQuery, PagedData<UserListItemDto>> { }
 ```
 
-### DTO
+### DTO如何命名？
 
 格式：`{Entity}Dto` 或 `{Entity}{Purpose}Dto`
 
@@ -254,9 +254,9 @@ public record UserListItemDto(UserId Id, string Name, string Email);
 public record OrderDetailDto(OrderId Id, string CustomerName, List<OrderItemDto> Items);
 ```
 
-## 仓储命名
+## 仓储如何命名？
 
-### 仓储接口
+### 仓储接口如何命名？
 
 格式：`I{Entity}Repository`
 
@@ -265,7 +265,7 @@ public interface IUserRepository : IRepository<User, UserId> { }
 public interface IOrderRepository : IRepository<Order, OrderId> { }
 ```
 
-### 仓储实现
+### 仓储实现如何命名？
 
 格式：`{Entity}Repository`
 
@@ -274,7 +274,7 @@ public class UserRepository : RepositoryBase<User, UserId, ApplicationDbContext>
 public class OrderRepository : RepositoryBase<Order, OrderId, ApplicationDbContext>, IOrderRepository { }
 ```
 
-### 仓储方法
+### 仓储方法如何命名？
 
 使用业务语言，体现业务意图：
 
@@ -285,9 +285,9 @@ Task<List<Order>> GetPendingOrdersAsync(CancellationToken cancellationToken);
 Task<List<Product>> GetPublishedProductsAsync(CancellationToken cancellationToken);
 ```
 
-## 事件处理器命名
+## 事件处理器如何命名？
 
-### 领域事件处理器
+### 领域事件处理器如何命名？
 
 格式：`{DomainEvent}HandlerFor{Purpose}`
 
@@ -311,7 +311,7 @@ public record UserCreatedIntegrationEvent(
     DateTime CreatedTime);
 ```
 
-### 集成事件处理器
+### 集成事件处理器如何命名？
 
 格式：`{IntegrationEvent}Handler`
 
@@ -320,9 +320,9 @@ public class PaymentCompletedIntegrationEventHandler
     : IIntegrationEventHandler<PaymentCompletedIntegrationEvent> { }
 ```
 
-## API端点命名
+## API端点如何命名？
 
-### Endpoint类
+### Endpoint类如何命名？
 
 格式：`{Action}{Entity}Endpoint`
 
@@ -332,7 +332,7 @@ public class GetUserEndpoint : Endpoint<GetUserRequest, UserDto> { }
 public class UpdateUserEmailEndpoint : EndpointWithoutResponse<UpdateUserEmailRequest> { }
 ```
 
-### 路由命名
+### 路由如何命名？
 
 使用RESTful约定：
 
@@ -349,9 +349,9 @@ public class UpdateUserEmailEndpoint : EndpointWithoutResponse<UpdateUserEmailRe
 /api/OrderList
 ```
 
-## 配置类命名
+## 配置类如何命名？
 
-### 实体配置
+### 实体配置如何命名？
 
 格式：`{Entity}EntityConfiguration`
 
@@ -360,9 +360,9 @@ public class UserEntityConfiguration : IEntityTypeConfiguration<User> { }
 public class OrderEntityConfiguration : IEntityTypeConfiguration<Order> { }
 ```
 
-## 测试类命名
+## 测试类如何命名？
 
-### 测试类
+### 测试类命名规则是什么？
 
 格式：`{ClassUnderTest}Tests`
 
@@ -372,7 +372,7 @@ public class CreateUserCommandHandlerTests { }
 public class GetUserQueryHandlerTests { }
 ```
 
-### 测试方法
+### 测试方法如何命名？
 
 格式：`{MethodName}_{Scenario}_{ExpectedBehavior}`
 
@@ -387,9 +387,9 @@ public void ChangeEmail_WithValidEmail_ShouldUpdateEmail() { }
 public void ChangeEmail_WithInvalidEmail_ShouldThrowException() { }
 ```
 
-## 文件命名
+## 文件如何命名？
 
-### 一般规则
+### 一般规则是什么？
 
 - 文件名与主要类名一致
 - 使用PascalCase
@@ -405,9 +405,9 @@ UserEntityConfiguration.cs           # 实体配置
 UserTests.cs                         # 测试类
 ```
 
-## 常量和枚举
+## 常量和枚举如何命名？
 
-### 常量
+### 常量如何命名？
 
 使用UPPER_CASE（C#传统）或PascalCase（.NET约定）：
 
@@ -417,7 +417,7 @@ public const int MAX_PAGE_SIZE = 100;
 public const int MaxPageSize = 100;
 ```
 
-### 枚举
+### 枚举如何命名？
 
 使用PascalCase，枚举值也使用PascalCase：
 
@@ -433,7 +433,7 @@ public enum OrderStatus
 }
 ```
 
-## 异常命名
+## 异常如何命名？
 
 格式：`{Description}Exception`
 
@@ -443,9 +443,9 @@ public class InvalidOrderStateException : Exception { }
 public class UserNotFoundException : Exception { }
 ```
 
-## 缩写使用
+## 缩写如何使用？
 
-### 常见缩写
+### 哪些是常见缩写？
 
 可以使用的常见缩写：
 
@@ -457,7 +457,7 @@ public class UserNotFoundException : Exception { }
 - **EF** - Entity Framework
 - **DB** - Database
 
-### 缩写大小写
+### 缩写大小写规则是什么？
 
 - 2个字母的缩写：全大写（如 `ID`, `IO`）
 - 3个或更多字母：只首字母大写（如 `Api`, `Http`, `Sql`）
@@ -474,7 +474,7 @@ public string APIKey { get; set; }
 public HttpClient HTTPClient { get; set; }
 ```
 
-## 布尔值命名
+## 布尔值如何命名？
 
 使用明确的前缀：
 
@@ -491,7 +491,7 @@ public bool Permission { get; set; }
 public bool Editable { get; set; }
 ```
 
-## 集合命名
+## 集合如何命名？
 
 使用复数形式：
 
@@ -506,7 +506,7 @@ public List<User> UserList { get; set; }
 public IEnumerable<Order> OrderCollection { get; set; }
 ```
 
-## 异步方法命名
+## 异步方法如何命名？
 
 添加"Async"后缀：
 
@@ -516,7 +516,7 @@ public async Task<bool> EmailExistsAsync(string email) { }
 public async Task CreateUserAsync(User user) { }
 ```
 
-## 命名检查清单
+## 如何检查命名是否合格？
 
 在命名时，问自己：
 
@@ -527,7 +527,7 @@ public async Task CreateUserAsync(User user) { }
 5. ✅ 是否避免了缩写和噪音词？
 6. ✅ 是否容易被团队成员理解？
 
-## 相关文档
+## 在哪里可以找到相关文档？
 
 - [项目结构最佳实践](project-structure.md)
 - [代码规范](code-standards.md)
