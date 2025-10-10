@@ -1,0 +1,84 @@
+site_name: Clean DDD Hub 知识库
+site_url: https://netcorepal.github.io/clean-ddd-hub/
+site_description: 领域驱动设计(DDD)和整洁架构(Clean Architecture)知识库
+site_author: NetCorePal
+
+theme:
+  name: material
+  language: zh
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - admonition
+  - pymdownx.details
+  - pymdownx.mark
+  - attr_list
+  - md_in_html
+  - tables
+
+nav:
+  - 首页: index.md
+  - 入门指南:
+      - 什么是DDD: getting-started/what-is-ddd.md
+      - 什么是Clean Architecture: getting-started/what-is-clean-architecture.md
+      - 快速开始: getting-started/quick-start.md
+  - 核心概念:
+      - 领域模型: core-concepts/domain-model.md
+      - 限界上下文: core-concepts/bounded-context.md
+      - 聚合根: core-concepts/aggregate-root.md
+      - 实体与值对象: core-concepts/entity-value-object.md
+      - 领域事件: core-concepts/domain-events.md
+      - 仓储模式: core-concepts/repository-pattern.md
+  - 架构设计:
+      - 分层架构: architecture/layered-architecture.md
+      - 六边形架构: architecture/hexagonal-architecture.md
+      - 整洁架构: architecture/clean-architecture.md
+      - CQRS模式: architecture/cqrs.md
+      - 事件驱动架构: architecture/event-driven.md
+  - 最佳实践:
+      - 项目结构: best-practices/project-structure.md
+      - 命名规范: best-practices/naming-conventions.md
+      - 测试策略: best-practices/testing-strategy.md
+      - 代码规范: best-practices/code-standards.md
+  - 开发工具:
+      - NetCorePal Cloud Framework: tools/netcorepal-framework.md
+      - CAP4J Framework: tools/cap4j-framework.md
+      - 开发工具推荐: tools/development-tools.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/netcorepal
