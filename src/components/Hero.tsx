@@ -30,9 +30,9 @@ const Hero = () => {
             </p>
             <div className="mt-10 flex justify-center space-x-4">
               <Button asChild size="lg">
-                <Link to="/knowledge">
+                <a href="https://docs.cleanddd.com/" target="_blank" rel="noopener noreferrer">
                   {t('home.hero.exploreButton')} <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
+                </a>
               </Button>
               <Button variant="outline" size="lg" asChild>
                 <Link to="/events">
