@@ -55,7 +55,7 @@
   },
   "knowledge": {
     "hero": {
-      "title": "Knowledge Base",
+      "title": "CleanDDD Knowledge Base",
       "subtitle": "Comprehensive resources on Domain-Driven Design principles, patterns, and practices.",
       "searchPlaceholder": "Search resources..."
     },

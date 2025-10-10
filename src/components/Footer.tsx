@@ -37,9 +37,9 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">{t('footer.quickLinks')}</h3>
             <ul className="space-y-3">
               <li>
-                <Link to="/knowledge" className="text-gray-400 hover:text-ddd-400 transition-colors">
+                <a href="https://docs.cleanddd.com/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-ddd-400 transition-colors">
                   {t('header.knowledge')}
-                </Link>
+                </a>
               </li>
               <li>
                 <Link to="/events" className="text-gray-400 hover:text-ddd-400 transition-colors">

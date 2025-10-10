@@ -55,7 +55,7 @@
   },
   "knowledge": {
     "hero": {
-      "title": "知识库",
+      "title": "CleanDDD 知识库",
       "subtitle": "关于领域驱动设计原则、模式和实践的综合资源。",
       "searchPlaceholder": "搜索资源..."
     },
