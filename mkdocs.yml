@@ -52,22 +52,29 @@ markdown_extensions:
 nav:
   - 首页: index.md
   - 入门指南:
-      - 什么是DDD: getting-started/what-is-ddd.md
-      - 什么是Clean Architecture: getting-started/what-is-clean-architecture.md
+      - 什么是CleanDDD: getting-started/what-is-CleanDDD.md
+      - 与Clean Architecture的关系: getting-started/what-is-clean-architecture.md
       - 快速开始: getting-started/quick-start.md
   - 核心概念:
-      - 领域模型: core-concepts/domain-model.md
-      - 限界上下文: core-concepts/bounded-context.md
-      - 聚合根: core-concepts/aggregate-root.md
-      - 实体与值对象: core-concepts/entity-value-object.md
+      - 聚合: core-concepts/aggregate.md
+      - 实体: core-concepts/entity.md
+      - 值对象: core-concepts/value-object.md
       - 领域事件: core-concepts/domain-events.md
       - 仓储模式: core-concepts/repository-pattern.md
-  - 架构设计:
-      - 分层架构: architecture/layered-architecture.md
-      - 六边形架构: architecture/hexagonal-architecture.md
-      - 整洁架构: architecture/clean-architecture.md
-      - CQRS模式: architecture/cqrs.md
-      - 事件驱动架构: architecture/event-driven.md
+      - 命令与处理器: core-concepts/command.md
+      - 查询与处理器: core-concepts/query.md
+      - 领域事件处理器: core-concepts/domain-event-handler.md
+      - 定时任务: core-concepts/scheduled-tasks.md
+      - 集成事件与处理器: core-concepts/integration-event.md
+  - 废弃的概念:
+      - 领域服务: deprecated-concepts/domain-service.md
+      - 限界上下文: deprecated-concepts/bounded-context.md
+      - 子域: deprecated-concepts/subdomain.md
+      - 控制器（Controller）: deprecated-concepts/controllers.md
+  - 建模指南:
+      - 如何识别聚合: modeling-guide/identifying-aggregates.md
+      - 拟人建模法: modeling-guide/hexagonal-architecture.md
+      - 收纳箱原则: modeling-guide/container-principle.md
   - 开发指南:
       - 聚合与实体开发: development-guide/aggregate-development.md
       - 命令开发: development-guide/command-development.md

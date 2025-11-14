@@ -309,6 +309,6 @@ public class OrderSubmittedEventHandler : IIntegrationEventHandler<OrderSubmitte
 
 ## 下一步
 
-- [聚合根](aggregate-root.md) - 上下文内的数据一致性边界
+- [聚合](aggregate.md) - 上下文内的数据一致性边界
 - [领域事件](domain-events.md) - 上下文间的解耦通信
 - [事件驱动架构](../architecture/event-driven.md) - 跨上下文集成

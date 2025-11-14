@@ -259,7 +259,7 @@ java -jar target/my-project.jar
 ### 深入核心概念
 
 - [领域模型](../core-concepts/domain-model.md)
-- [聚合根](../core-concepts/aggregate-root.md)
+- [聚合](../core-concepts/aggregate.md)
 - [领域事件](../core-concepts/domain-events.md)
 - [仓储模式](../core-concepts/repository-pattern.md)
 

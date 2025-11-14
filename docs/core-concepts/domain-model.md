@@ -346,6 +346,6 @@ public void Submit_AlreadySubmittedOrder_ShouldThrowException()
 ## 下一步
 
 - [限界上下文](bounded-context.md) - 了解如何划分领域边界
-- [聚合根](aggregate-root.md) - 深入理解聚合设计
+- [聚合](aggregate.md) - 深入理解聚合设计
 - [实体与值对象](entity-value-object.md) - 区分两种领域对象
 - [领域事件](domain-events.md) - 使用事件解耦业务流程

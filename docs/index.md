@@ -10,7 +10,7 @@ CleanDDD 知识库致力于帮助开发者理解和实践领域驱动设计(Doma
 
 如果你是新手，建议从以下内容开始：
 
-- [什么是DDD](getting-started/what-is-ddd.md) - 了解领域驱动设计的核心思想
+- [什么是CleanDDD](getting-started/what-is-CleanDDD.md) - 了解领域驱动设计的核心思想
 - [什么是Clean Architecture](getting-started/what-is-clean-architecture.md) - 理解整洁架构的设计原则
 - [快速开始](getting-started/quick-start.md) - 使用我们的框架快速搭建项目
 
@@ -20,10 +20,13 @@ CleanDDD 知识库致力于帮助开发者理解和实践领域驱动设计(Doma
 
 - [领域模型](core-concepts/domain-model.md) - 构建业务核心模型
 - [限界上下文](core-concepts/bounded-context.md) - 划分系统边界
-- [聚合根](core-concepts/aggregate-root.md) - 保证数据一致性
-- [实体与值对象](core-concepts/entity-value-object.md) - 区分不同的领域对象
+- [聚合](core-concepts/aggregate.md) - 保证数据一致性
+- [实体](core-concepts/entity.md) 与 [值对象](core-concepts/value-object.md) - 区分不同的领域对象
 - [领域事件](core-concepts/domain-events.md) - 实现松耦合的事件驱动
 - [仓储模式](core-concepts/repository-pattern.md) - 抽象数据访问
+- [命令与处理器](core-concepts/command.md) · [查询与处理器](core-concepts/query.md)
+- [领域事件处理器](core-concepts/domain-event-handler.md) · [定时任务](core-concepts/scheduled-tasks.md)
+- [集成事件与处理器](core-concepts/integration-event.md)
 
 ### 🏗️ 架构设计
 
