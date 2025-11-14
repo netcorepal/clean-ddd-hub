@@ -2,110 +2,194 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://docs.cleanddd.com/</loc>
-         <lastmod>2025-10-10</lastmod>
+         <lastmod>2025-11-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleanddd.com/architecture/clean-architecture/</loc>
-         <lastmod>2025-10-10</lastmod>
+         <lastmod>2025-11-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleanddd.com/architecture/cqrs/</loc>
-         <lastmod>2025-10-10</lastmod>
+         <lastmod>2025-11-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleanddd.com/architecture/event-driven/</loc>
-         <lastmod>2025-10-10</lastmod>
+         <lastmod>2025-11-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleanddd.com/architecture/hexagonal-architecture/</loc>
-         <lastmod>2025-10-10</lastmod>
+         <lastmod>2025-11-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleanddd.com/architecture/layered-architecture/</loc>
-         <lastmod>2025-10-10</lastmod>
+         <lastmod>2025-11-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleanddd.com/best-practices/code-standards/</loc>
-         <lastmod>2025-10-10</lastmod>
+         <lastmod>2025-11-14</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleanddd.com/best-practices/dto-design/</loc>
+         <lastmod>2025-11-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleanddd.com/best-practices/naming-conventions/</loc>
-         <lastmod>2025-10-10</lastmod>
+         <lastmod>2025-11-14</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleanddd.com/best-practices/performance-optimization/</loc>
+         <lastmod>2025-11-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleanddd.com/best-practices/project-structure/</loc>
-         <lastmod>2025-10-10</lastmod>
+         <lastmod>2025-11-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleanddd.com/best-practices/testing-strategy/</loc>
-         <lastmod>2025-10-10</lastmod>
+         <lastmod>2025-11-14</lastmod>
     </url>
     <url>
-         <loc>https://docs.cleanddd.com/core-concepts/aggregate-root/</loc>
-         <lastmod>2025-10-10</lastmod>
+         <loc>https://docs.cleanddd.com/core-concepts/aggregate/</loc>
+         <lastmod>2025-11-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleanddd.com/core-concepts/bounded-context/</loc>
-         <lastmod>2025-10-10</lastmod>
+         <lastmod>2025-11-14</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleanddd.com/core-concepts/command/</loc>
+         <lastmod>2025-11-14</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleanddd.com/core-concepts/domain-event-handler/</loc>
+         <lastmod>2025-11-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleanddd.com/core-concepts/domain-events/</loc>
-         <lastmod>2025-10-10</lastmod>
+         <lastmod>2025-11-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleanddd.com/core-concepts/domain-model/</loc>
-         <lastmod>2025-10-10</lastmod>
+         <lastmod>2025-11-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleanddd.com/core-concepts/entity-value-object/</loc>
-         <lastmod>2025-10-10</lastmod>
+         <lastmod>2025-11-14</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleanddd.com/core-concepts/entity/</loc>
+         <lastmod>2025-11-14</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleanddd.com/core-concepts/integration-event/</loc>
+         <lastmod>2025-11-14</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleanddd.com/core-concepts/query/</loc>
+         <lastmod>2025-11-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleanddd.com/core-concepts/repository-pattern/</loc>
-         <lastmod>2025-10-10</lastmod>
+         <lastmod>2025-11-14</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleanddd.com/core-concepts/scheduled-tasks/</loc>
+         <lastmod>2025-11-14</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleanddd.com/core-concepts/value-object/</loc>
+         <lastmod>2025-11-14</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleanddd.com/deprecated-concepts/bounded-context/</loc>
+         <lastmod>2025-11-14</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleanddd.com/deprecated-concepts/controllers/</loc>
+         <lastmod>2025-11-14</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleanddd.com/deprecated-concepts/domain-service/</loc>
+         <lastmod>2025-11-14</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleanddd.com/deprecated-concepts/subdomain/</loc>
+         <lastmod>2025-11-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleanddd.com/development-guide/aggregate-development/</loc>
-         <lastmod>2025-10-10</lastmod>
+         <lastmod>2025-11-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleanddd.com/development-guide/command-development/</loc>
-         <lastmod>2025-10-10</lastmod>
+         <lastmod>2025-11-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleanddd.com/development-guide/domain-event-development/</loc>
-         <lastmod>2025-10-10</lastmod>
+         <lastmod>2025-11-14</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleanddd.com/development-guide/domain-event-handler-development/</loc>
+         <lastmod>2025-11-14</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleanddd.com/development-guide/endpoint-development/</loc>
+         <lastmod>2025-11-14</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleanddd.com/development-guide/entity-configuration/</loc>
+         <lastmod>2025-11-14</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleanddd.com/development-guide/integration-event-development/</loc>
+         <lastmod>2025-11-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleanddd.com/development-guide/query-development/</loc>
-         <lastmod>2025-10-10</lastmod>
+         <lastmod>2025-11-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleanddd.com/development-guide/repository-development/</loc>
-         <lastmod>2025-10-10</lastmod>
+         <lastmod>2025-11-14</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleanddd.com/development-guide/unit-testing/</loc>
+         <lastmod>2025-11-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleanddd.com/getting-started/quick-start/</loc>
-         <lastmod>2025-10-10</lastmod>
+         <lastmod>2025-11-14</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleanddd.com/getting-started/what-is-CleanDDD/</loc>
+         <lastmod>2025-11-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleanddd.com/getting-started/what-is-clean-architecture/</loc>
-         <lastmod>2025-10-10</lastmod>
+         <lastmod>2025-11-14</lastmod>
     </url>
     <url>
-         <loc>https://docs.cleanddd.com/getting-started/what-is-ddd/</loc>
-         <lastmod>2025-10-10</lastmod>
+         <loc>https://docs.cleanddd.com/modeling-guide/container-principle/</loc>
+         <lastmod>2025-11-14</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleanddd.com/modeling-guide/hexagonal-architecture/</loc>
+         <lastmod>2025-11-14</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cleanddd.com/modeling-guide/identifying-aggregates/</loc>
+         <lastmod>2025-11-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleanddd.com/tools/cap4j-framework/</loc>
-         <lastmod>2025-10-10</lastmod>
+         <lastmod>2025-11-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleanddd.com/tools/development-tools/</loc>
-         <lastmod>2025-10-10</lastmod>
+         <lastmod>2025-11-14</lastmod>
     </url>
     <url>
          <loc>https://docs.cleanddd.com/tools/netcorepal-framework/</loc>
-         <lastmod>2025-10-10</lastmod>
+         <lastmod>2025-11-14</lastmod>
     </url>
 </urlset>
