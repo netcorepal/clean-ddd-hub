@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -713,7 +713,7 @@
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        什么是聚合根
+        设计原则
       
     </span>
   </a>
@@ -724,18 +724,7 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        主要职责
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        设计原则
+        聚合的主要职责
       
     </span>
   </a>
@@ -1888,7 +1877,7 @@
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        什么是聚合根
+        设计原则
       
     </span>
   </a>
@@ -1899,18 +1888,7 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        主要职责
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        设计原则
+        聚合的主要职责
       
     </span>
   </a>
@@ -1936,24 +1914,21 @@
 
 <h1 id="aggregate">聚合 (Aggregate)</h1>
 <h2 id="_1">什么是聚合</h2>
-<p>聚合是DDD中的重要概念，它是一个由多个实体和值对象组成的聚合体，负责维护聚合内的数据一致性。</p>
-<h2 id="_2">什么是聚合根</h2>
-<p>聚合根是聚合的根实体，所有对聚合的访问和修改都必须通过聚合根。</p>
-<h2 id="_3">主要职责</h2>
-<ol>
-<li><strong>维护不变式</strong>: 确保聚合内的业务规则</li>
-<li><strong>控制访问</strong>: 作为聚合的唯一入口</li>
-<li><strong>管理生命周期</strong>: 负责创建和删除聚合内的对象</li>
-<li><strong>发布领域事件</strong>: 当重要业务变化发生时</li>
-</ol>
-<h2 id="_4">设计原则</h2>
+<p>CleanDDD 中，聚合是最小的业务内聚模型单元，聚合之间相互独立，从而实现也业务边界的隔离。
+聚合由聚合根、子实体和值对象组合而成，其中聚合根是聚合的根部实体，子实体和值对象是按需可选的，作为聚合根的属性存在。</p>
+<h2 id="_2">设计原则</h2>
 <ul>
-<li>聚合应该尽可能小</li>
-<li>通过ID引用其他聚合</li>
-<li>在事务边界内更新单个聚合</li>
-<li>使用最终一致性处理多个聚合</li>
+<li>一个聚合必须有且只有一个聚合根</li>
+<li>聚合之间不允许直接相互引用</li>
+<li>聚合之间不共享实体，即不允许通过子实体对象引用其他聚合</li>
+<li>聚合内的对象只能通过聚合根或者其子实体的方法进行修改</li>
 </ul>
-<p><em>(更多内容待补充)</em></p>
+<h2 id="_3">聚合的主要职责</h2>
+<ul>
+<li>负责相关业务的数据信息呈现（查询数据来源）</li>
+<li>负责基于业务规则对数据进行操作（行为）</li>
+<li>负责聚合内数据的一致性保障</li>
+</ul>
 
 
 
@@ -2027,10 +2002,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
