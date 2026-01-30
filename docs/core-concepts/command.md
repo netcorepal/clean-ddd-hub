@@ -1,4 +1,4 @@
-# 命令与处理器（Command & Handler）
+# 命令与命令处理器（Command & CommandHandler）
 
 本页用于介绍 Command 模式在 CleanDDD 中的定位与职责划分。
 
