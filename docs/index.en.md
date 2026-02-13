@@ -17,6 +17,14 @@ With clear concepts and rules that are easy to follow, CleanDDD helps prevent co
 
 Keeping boundaries clear is the most important thing.
 
+## CleanDDD Skills (AI Agent Support)
+
+We provide the `cleanddd-skills` project, a reusable skill set for AI agents to integrate CleanDDD capabilities into automated workflows.
+
+Project link:
+
+- https://github.com/netcorepal/cleanddd-skills
+
 ## Concept Definitions
 
 - Aggregate: A set of objects responsible for core business data and behavior, with a clear boundary and consistency rules.

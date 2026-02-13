@@ -34,7 +34,7 @@
       "titleHighlight": "Domain-Driven Design",
       "subtitle": "通过一套易理解的概念和可执行规则帮助开发者实践领域驱动设计，构建具备高度可维护性的软件系统。",
       "summary": "基于领域驱动设计核心理念的概念简化与重构，用一套易执行的工程方法让复杂系统保持边界清晰。",
-      "primaryButton": "探索知识库",
+      "primaryButton": "探索文档",
       "secondaryButton": "查看建模方法",
       "cardTitle": "四个组成部分",
       "highlights": {
@@ -57,6 +57,11 @@
         "title": "价值取向",
         "highlight": "保持边界明确是最重要的事。",
         "description": "围绕边界构建模型、规则与实现，确保复杂性有序收敛。"
+      },
+      "skills": {
+        "title": "CleanDDD Skills（AI Agent 支持）",
+        "description": "我们提供 cleanddd-skills 项目，面向 AI Agent 提供 CleanDDD 能力支持与可复用技能集，便于在自动化场景中调用。",
+        "linkText": "查看 cleanddd-skills"
       },
       "concepts": {
         "title": "概念定义",

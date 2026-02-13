@@ -73,6 +73,27 @@ const IntroSection = () => {
             </div>
           </div>
 
+          <div className="rounded-2xl border border-slate-200 bg-slate-50 p-6 sm:p-8">
+            <div className="flex items-center justify-between gap-4">
+              <div>
+                <h3 className="font-display text-2xl text-slate-900">
+                  {t("home.sections.skills.title")}
+                </h3>
+                <p className="mt-3 text-slate-600 leading-relaxed">
+                  {t("home.sections.skills.description")}
+                </p>
+              </div>
+              <a
+                href="https://github.com/netcorepal/cleanddd-skills"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="shrink-0 rounded-full border border-slate-200 px-4 py-2 text-sm font-semibold text-slate-900 hover:border-slate-300"
+              >
+                {t("home.sections.skills.linkText")}
+              </a>
+            </div>
+          </div>
+
           <div>
             <h3 className="font-display text-2xl sm:text-3xl text-slate-900 mb-8">
               {t("home.sections.concepts.title")}

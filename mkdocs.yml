@@ -59,6 +59,7 @@ extra_css:
 
 nav:
   - 什么是 CleanDDD: index.md
+  - CleanDDD Skills: cleanddd-skills.md
 
 extra:
   homepage: /

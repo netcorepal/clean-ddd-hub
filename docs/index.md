@@ -17,6 +17,14 @@ CleanDDD 即 Clean Domain-Driven Design，是基于领域驱动设计（DDD）�
 
 保持边界明确是最重要的事。
 
+## CleanDDD Skills（AI Agent 支持）
+
+我们提供了 `cleanddd-skills` 项目，面向 AI Agent 提供 CleanDDD 的能力支持与可复用技能集，便于在自动化场景中调用。
+
+项目地址：
+
+- https://github.com/netcorepal/cleanddd-skills
+
 ## CleanDDD 的概念定义
 
 - 聚合：负责独立维护业务核心数据和行为的对象集合，具有明确的边界和一致性规则。

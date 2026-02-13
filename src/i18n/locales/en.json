@@ -34,7 +34,7 @@
       "titleHighlight": "Domain-Driven Design",
       "subtitle": "Helping developers practice Domain-Driven Design with understandable elements and executable rules to build highly maintainable software systems.",
       "summary": "A practical engineering guide that simplifies core DDD concepts, keeping complex systems clear by protecting boundaries.",
-      "primaryButton": "Explore Knowledge Base",
+      "primaryButton": "Explore Docs",
       "secondaryButton": "View Modeling Method",
       "cardTitle": "Four Building Blocks",
       "highlights": {
@@ -57,6 +57,11 @@
         "title": "Value Orientation",
         "highlight": "Keeping boundaries explicit is the most important thing.",
         "description": "Build models, rules, and implementations around boundaries so complexity stays organized."
+      },
+      "skills": {
+        "title": "CleanDDD Skills (AI Agent Support)",
+        "description": "We provide the cleanddd-skills project, a reusable skill set for AI agents to integrate CleanDDD capabilities into automated workflows.",
+        "linkText": "View cleanddd-skills"
       },
       "concepts": {
         "title": "Concept Definitions",
