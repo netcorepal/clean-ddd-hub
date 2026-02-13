@@ -32,24 +32,163 @@
     "hero": {
       "title": "Clean",
       "titleHighlight": "Domain-Driven Design",
-      "subtitle": "Helping developers practice Domain-Driven Design with a set of understandable elements and executable rules to build highly maintainable software systems.",
-      "exploreButton": "Explore Knowledge Base",
-      "eventsButton": "Upcoming Events"
+      "subtitle": "Helping developers practice Domain-Driven Design with understandable elements and executable rules to build highly maintainable software systems.",
+      "summary": "A practical engineering guide that simplifies core DDD concepts, keeping complex systems clear by protecting boundaries.",
+      "primaryButton": "Explore Knowledge Base",
+      "secondaryButton": "View Modeling Method",
+      "cardTitle": "Four Building Blocks",
+      "highlights": {
+        "0": "A value orientation",
+        "1": "A set of concept definitions",
+        "2": "A modeling method",
+        "3": "A coding standard"
+      }
     },
-    "intro": {
-      "title": "What is Clean DDD?",
-      "paragraph1": "It includes a value orientation, a set of concept definitions, a modeling method, and a set of code specifications. With Clean DDD, developers can more easily complete requirement analysis, model design, and code implementation.",
-      "paragraph2": "Our goal is to simplify the learning curve of Domain-Driven Design to help developers quickly grasp the core concepts and practices of Domain-Driven Design.",
-      "benefitsTitle": "Benefits of Clean DDD",
-      "coreConceptsTitle": "Core Concepts",
-      "coreConceptsDescription": "Clean DDD focuses on the consistency of requirements, models, and code, emphasizing the avoidance of over-design while meeting requirements and maintaining code maintainability.",
-      "benefits": {
-        "0": "Concepts are easy to understand",
-        "1": "Modeling methods are simple to learn",
-        "2": "Clear and easy-to-follow guidelines",
-        "3": "Does not rely on developers' modeling experience",
-        "4": "Provides detailed documentation and examples",
-        "5": "Not tightly coupled to any specific programming language"
+    "sections": {
+      "definition": {
+        "title": "Definition of CleanDDD",
+        "description": "CleanDDD, short for Clean Domain-Driven Design, is a practical software engineering guide that simplifies and restructures core DDD concepts."
+      },
+      "goal": {
+        "title": "Goal",
+        "description": "With clear concepts and easy-to-follow principles, it prevents code from decaying into chaos, helping developers master complex systems and deliver sustainable rapid iteration."
+      },
+      "value": {
+        "title": "Value Orientation",
+        "highlight": "Keeping boundaries explicit is the most important thing.",
+        "description": "Build models, rules, and implementations around boundaries so complexity stays organized."
+      },
+      "concepts": {
+        "title": "Concept Definitions",
+        "items": [
+          {
+            "title": "Aggregate",
+            "description": "An object cluster that independently maintains core business data and behavior with clear boundaries and consistency rules."
+          },
+          {
+            "title": "Domain Event",
+            "description": "An object produced by aggregate behavior that reflects a business event, usually named in the past tense."
+          },
+          {
+            "title": "Domain Event Handler",
+            "description": "Creates and emits the corresponding command based on a domain event."
+          },
+          {
+            "title": "Command",
+            "description": "An object triggered by user action or system event to request a change in aggregate state."
+          },
+          {
+            "title": "Command Handler",
+            "description": "Operates on an aggregate to fulfill business needs."
+          },
+          {
+            "title": "Query & Query Handler",
+            "description": "Fetches aggregate data to satisfy user query requirements."
+          },
+          {
+            "title": "Scheduled Task",
+            "description": "Runs at a specific time or interval, usually to emit commands that change aggregate state."
+          },
+          {
+            "title": "Integration Event",
+            "description": "An event used to transfer information between systems, usually converted from a domain event."
+          },
+          {
+            "title": "Integration Event Handler",
+            "description": "Handles integration events and emits corresponding commands, typically in the receiving system."
+          }
+        ]
+      },
+      "modeling": {
+        "title": "Modeling Method",
+        "steps": [
+          {
+            "title": "Identify Aggregates",
+            "points": [
+              "When you see a requirement to create x, x is likely an aggregate.",
+              "When x cannot exist alone and depends on another entity, define x as a child entity."
+            ]
+          },
+          {
+            "title": "Identify Commands & Handlers",
+            "points": [
+              "If an operation needs to change aggregate state, define it as a command.",
+              "Commands are typically triggered by user actions, domain event handlers, or scheduled tasks."
+            ]
+          },
+          {
+            "title": "Identify Domain Events",
+            "points": [
+              "Domain events are named in the past tense to show something important has happened.",
+              "Names should reflect business meaning, such as OrderCreated or CustomerAddressUpdated."
+            ]
+          },
+          {
+            "title": "Identify Domain Event Handlers",
+            "points": [
+              "When a requirement says \"after doing x, do y\", use a domain event handler to trigger y.",
+              "Each handler should focus on a single domain event with clear responsibilities."
+            ]
+          },
+          {
+            "title": "Identify Queries",
+            "points": [
+              "When users need to view aggregate data, define it as a query.",
+              "When business rules need aggregate data for decisions, define it as a query as well."
+            ]
+          }
+        ]
+      },
+      "standards": {
+        "title": "Coding Standards",
+        "items": [
+          {
+            "title": "Aggregates",
+            "points": [
+              "Aggregates cannot reference each other directly.",
+              "Aggregates do not share entities or reference other aggregates through child entities.",
+              "Objects inside an aggregate can only be changed through the aggregate root or child entity methods.",
+              "Aggregate property changes must be done through aggregate behavior (methods)."
+            ]
+          },
+          {
+            "title": "Domain Events",
+            "points": [
+              "Domain events must be produced by aggregate behavior."
+            ]
+          },
+          {
+            "title": "Command Handlers",
+            "points": [
+              "A command handler can modify only one aggregate."
+            ]
+          },
+          {
+            "title": "Event Handlers",
+            "points": [
+              "An event handler can handle only one domain event."
+            ]
+          },
+          {
+            "title": "Queries",
+            "points": [
+              "Cross-aggregate join queries are not allowed."
+            ]
+          }
+        ]
+      },
+      "qa": {
+        "title": "Q&A",
+        "items": [
+          {
+            "question": "How is CleanDDD related to Clean Architecture?",
+            "answer": "CleanDDD has no direct relationship to Clean Architecture. While they share some similarities in code organization, their focus and goals differ, and the layering concepts are not the same. The \"Clean\" in CleanDDD emphasizes simplifying concepts and practical execution rather than a specific architecture style."
+          },
+          {
+            "question": "Will software built with CleanDDD perform poorly?",
+            "answer": "No. Most business systems are I/O bound and read-heavy. CleanDDD enforces clear aggregate boundaries and disallows cross-aggregate direct operations, which leads to some redundant storage but reduces cross-aggregate data access, improving overall performance."
+          }
+        ]
       }
     }
   },

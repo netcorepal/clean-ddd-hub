@@ -74,7 +74,12 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: "Space Grotesk", "IBM Plex Sans", "Inter", system-ui, sans-serif;
   }
+}
+
+.font-display {
+  font-family: "Sora", "Space Grotesk", "IBM Plex Sans", "Inter", system-ui, sans-serif;
 }
 
 .gradient-text {

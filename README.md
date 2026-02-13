@@ -20,8 +20,7 @@ The knowledge base is built with MkDocs and contains:
 
 ### Viewing the Knowledge Base
 
-The knowledge base is automatically deployed to GitHub Pages:
-**https://netcorepal.github.io/clean-ddd-hub/**
+The knowledge base is built into the same site and served from `/docs` after the build.
 
 ### Local Development of Documentation
 
@@ -111,7 +110,7 @@ This project is built with:
 Simply open [Lovable](https://lovable.dev/projects/3f61c7af-cb54-4685-836d-7dd4dc7b9839) and click on Share -> Publish.
 
 ### Documentation
-Documentation is automatically deployed to GitHub Pages when changes are pushed to the `main` branch. The GitHub Actions workflow handles the build and deployment.
+Documentation is built as part of the main build and deployed alongside the frontend.
 
 ## Can I connect a custom domain to my Lovable project?
 

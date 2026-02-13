@@ -47,7 +47,7 @@ const Header = () => {
               <Link to="/" className="text-gray-700 hover:text-ddd-600 transition-all-200">
                 {t('header.home')}
               </Link>
-              <a href="https://docs.cleanddd.com/" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-ddd-600 transition-all-200">
+              <a href="/docs/" className="text-gray-700 hover:text-ddd-600 transition-all-200">
                 {t('header.knowledge')}
               </a>
               <Link to="/frameworks" className="text-gray-700 hover:text-ddd-600 transition-all-200">
@@ -90,9 +90,7 @@ const Header = () => {
                 {t('header.home')}
               </Link>
               <a 
-                href="https://docs.cleanddd.com/" 
-                target="_blank" 
-                rel="noopener noreferrer"
+                href="/docs/" 
                 className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md"
                 onClick={() => setIsMenuOpen(false)}
               >

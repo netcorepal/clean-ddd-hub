@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "trailingSlash": true,
   "builds": [
     {
       "src": "package.json",
@@ -7,8 +8,9 @@
       "config": { "distDir": "dist" }
     }
   ],
-  "routes": [
-    { "handle": "filesystem" },
-    { "src": "/.*", "dest": "/index.html" }
+  "rewrites": [
+    { "source": "/docs", "destination": "/docs/index.html" },
+    { "source": "/docs/:path*", "destination": "/docs/:path*" },
+    { "source": "/:path*", "destination": "/index.html" }
   ]
 }
