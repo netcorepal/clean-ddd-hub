@@ -1,6 +1,6 @@
-site_name: CleanDDD 知识库
+site_name: CleanDDD 文档
 site_url: https://docs.cleanddd.com/
-site_description: 领域驱动设计(DDD)和整洁架构(Clean Architecture)知识库
+site_description: CleanDDD 文档
 site_author: NetCorePal
 
 theme:
@@ -38,53 +38,35 @@ markdown_extensions:
   - md_in_html
   - tables
 
+plugins:
+  - search
+  - i18n:
+      languages:
+        - locale: zh
+          name: 简体中文
+          default: true
+          build: true
+        - locale: en
+          name: English
+          build: true
+          nav_translations:
+            什么是 CleanDDD: What is CleanDDD
+
 extra_css:
   - stylesheets/engineering.css
 
 nav:
-  - 首页: index.md
-  - 入门指南:
-      - 什么是CleanDDD: getting-started/what-is-CleanDDD.md
-      - 与Clean Architecture的关系: getting-started/what-is-clean-architecture.md
-      - 快速开始: getting-started/quick-start.md
-  - 核心概念:
-      - 聚合: core-concepts/aggregate.md
-      - 实体: core-concepts/entity.md
-      - 值对象: core-concepts/value-object.md
-      - 领域事件: core-concepts/domain-events.md
-      - 仓储模式: core-concepts/repository-pattern.md
-      - 命令与处理器: core-concepts/command.md
-      - 查询与处理器: core-concepts/query.md
-      - 领域事件处理器: core-concepts/domain-event-handler.md
-      - 定时任务: core-concepts/scheduled-tasks.md
-      - 集成事件与处理器: core-concepts/integration-event.md
-  - 废弃的概念:
-      - 领域服务: deprecated-concepts/domain-service.md
-      - 限界上下文: deprecated-concepts/bounded-context.md
-      - 子域: deprecated-concepts/subdomain.md
-      - 控制器（Controller）: deprecated-concepts/controllers.md
-  - 建模指南:
-      - 如何识别聚合: modeling-guide/identifying-aggregates.md
-      - 拟人建模法: modeling-guide/hexagonal-architecture.md
-      - 收纳箱原则: modeling-guide/container-principle.md
-  - 开发指南:
-      - 聚合与实体开发: development-guide/aggregate-development.md
-      - 命令开发: development-guide/command-development.md
-      - 查询开发: development-guide/query-development.md
-      - 领域事件开发: development-guide/domain-event-development.md
-      - 仓储开发: development-guide/repository-development.md
-  - 最佳实践:
-      - 项目结构: best-practices/project-structure.md
-      - 命名规范: best-practices/naming-conventions.md
-      - 测试策略: best-practices/testing-strategy.md
-      - 代码规范: best-practices/code-standards.md
-  - 开发工具:
-      - NetCorePal Cloud Framework: tools/netcorepal-framework.md
-      - CAP4J Framework: tools/cap4j-framework.md
-      - 开发工具推荐: tools/development-tools.md
+  - 什么是 CleanDDD: index.md
 
 extra:
   homepage: /
+  alternate:
+    - name: 简体中文
+      link: /
+      lang: zh
+    - name: English
+      link: /en/
+      lang: en
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/netcorepal

@@ -19,6 +19,20 @@
   backdrop-filter: blur(12px);
 }
 
+.md-header__title,
+.md-header__topic,
+.md-header__button,
+.md-header__button .md-icon,
+.md-header__source,
+.md-tabs__link,
+.md-tabs__link--active {
+  color: #0f172a;
+}
+
+.md-tabs__link:hover {
+  color: #0b0f16;
+}
+
 .md-sidebar--primary {
   border-right: 1px solid #e5e7eb;
 }

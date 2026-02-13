@@ -1,93 +1,77 @@
-# 欢迎来到 CleanDDD 知识库
+# CleanDDD 的定义
 
-## 关于本知识库
+## 什么是 CleanDDD？
 
-CleanDDD 知识库致力于帮助开发者理解和实践领域驱动设计(Domain-Driven Design)和整洁架构(Clean Architecture)。无论你是刚接触这些概念的新手，还是希望深入了解最佳实践的经验开发者，这里都能找到你需要的内容。
+CleanDDD 即 Clean Domain-Driven Design，是基于领域驱动设计（DDD）的核心理念，经过概念简化和重构，形成的一套实用的软件工程指南，它包含四个重要组成部分：
 
-## 快速导航
+- 一个价值取向
+- 一组概念定义
+- 一种建模方法
+- 一套代码规范
 
-### 🚀 入门指南
+## CleanDDD 的目标
 
-如果你是新手，建议从以下内容开始：
+通过明确的概念和易于遵守的原则，避免代码快速腐化陷入混乱不可维护的困境，帮助开发者掌控复杂的软件系统，保持对软件系统和代码的掌控力，从而实现可持续的快速迭代和交付能力。
 
-- [什么是CleanDDD](getting-started/what-is-CleanDDD.md) - 了解领域驱动设计的核心思想
-- [什么是Clean Architecture](getting-started/what-is-clean-architecture.md) - 理解整洁架构的设计原则
-- [快速开始](getting-started/quick-start.md) - 使用我们的框架快速搭建项目
+## CleanDDD 的价值取向
 
-### 📚 核心概念
+保持边界明确是最重要的事。
 
-深入理解DDD的核心概念：
+## CleanDDD 的概念定义
 
-- [领域模型](core-concepts/domain-model.md) - 构建业务核心模型
-- [限界上下文](core-concepts/bounded-context.md) - 划分系统边界
-- [聚合](core-concepts/aggregate.md) - 保证数据一致性
-- [实体](core-concepts/entity.md) 与 [值对象](core-concepts/value-object.md) - 区分不同的领域对象
-- [领域事件](core-concepts/domain-events.md) - 实现松耦合的事件驱动
-- [仓储模式](core-concepts/repository-pattern.md) - 抽象数据访问
-- [命令与处理器](core-concepts/command.md) · [查询与处理器](core-concepts/query.md)
-- [领域事件处理器](core-concepts/domain-event-handler.md) · [定时任务](core-concepts/scheduled-tasks.md)
-- [集成事件与处理器](core-concepts/integration-event.md)
+- 聚合：负责独立维护业务核心数据和行为的对象集合，具有明确的边界和一致性规则。
+- 领域事件：由聚合行为产生的、反映业务事件发生的对象，通常以过去式命名。
+- 领域事件处理器：负责基于领域事件创建并发出相应的命令。
+- 命令：由用户操作或系统事件触发的、请求修改聚合状态的对象。
+- 命令处理器：负责操作聚合以实现业务需求。
+- 查询与查询处理器：负责从聚合中获取数据以满足用户的查询需求。
+- 定时任务：在特定时间或周期性地执行某些操作的任务，通常用于发出命令修改聚合状态。
+- 集成事件：在不同系统之间传递信息的事件，通常由领域事件转化而来，并在 MQ 等消息中间件中传递。
+- 集成事件处理器：处理集成事件并发出相应命令的组件，通常位于接收系统中。
 
-### 🏗️ 架构设计
+## CleanDDD 的建模方法
 
-学习不同的架构模式：
+- 识别聚合
+	- 当识别到“创建 x”的需求时，很可能 x 就是一个聚合。
+	- 当发现 x 无法独立存在，需要依附到另一个实体时，x 可以定义为该实体的子实体。
+- 识别命令与命令处理器
+	- 当某个操作需要修改聚合状态时，这个操作就可以定义为一个命令。
+	- 命令通常由以下情形触发：
+		- 用户操作（如通过 UI 提交表单）
+		- 领域事件处理器
+		- 定时任务
+- 识别领域事件
+	- 领域事件通常以过去式命名，表示某个重要业务事件已经发生。
+	- 命名应反映业务含义，例如 `OrderCreated`、`CustomerAddressUpdated`。
+- 识别领域事件处理器
+	- 当识别到“当做 x 操作后，要做 y 操作”的需求时，y 操作应由领域事件处理器触发。
+	- 每个领域事件处理器应专注于处理单一领域事件，确保职责清晰。
+- 识别查询
+	- 当用户需要查看聚合数据时，这个操作就可以定义为查询。
+	- 当业务规则判断需要基于聚合数据时，这个操作也可以定义为查询。
 
-- [分层架构](architecture/layered-architecture.md) - 传统的分层设计
-- [六边形架构](architecture/hexagonal-architecture.md) - 端口与适配器模式
-- [整洁架构](architecture/clean-architecture.md) - Uncle Bob的整洁架构
-- [CQRS模式](architecture/cqrs.md) - 命令查询职责分离
-- [事件驱动架构](architecture/event-driven.md) - 基于事件的系统设计
+## CleanDDD 的代码规范
 
-### 💡 最佳实践
+- 聚合
+	- 聚合之间不允许直接相互引用。
+	- 聚合之间不共享实体，即不允许通过子实体对象引用其他聚合。
+	- 聚合内对象只能通过聚合根或其子实体的方法进行修改。
+	- 聚合属性变更必须通过聚合的行为（方法）来完成。
+- 领域事件
+	- 领域事件必须由聚合的行为产生。
+- 命令处理器
+	- 命令处理器只能修改单个聚合。
+- 事件处理器
+	- 一个事件处理器只能处理单个领域事件。
+- 查询
+	- 不允许跨聚合的 Join 查询。
 
-实战经验和建议：
+## Q&A
 
-- [项目结构](best-practices/project-structure.md) - 推荐的项目组织方式
-- [命名规范](best-practices/naming-conventions.md) - 统一的命名约定
-- [测试策略](best-practices/testing-strategy.md) - 全面的测试方法
-- [代码规范](best-practices/code-standards.md) - 代码质量标准
+### CleanDDD 与 Clean Architecture 关系是怎样的？
 
-### 🛠️ 开发工具
+CleanDDD 与 Clean Architecture 并无直接关系，在代码组织方式上有一定相似性，但两者的关注点和目标不同，涉及的分层概念也不完全相同。CleanDDD 的 Clean 更强调对复杂概念的简化与实践便捷性，而不是指代某种特定架构风格。
 
-我们提供的开发框架和工具：
+### 基于 CleanDDD 开发的软件，性能会不会很差？
 
-- [NetCorePal Cloud Framework](tools/netcorepal-framework.md) - .NET平台的DDD框架
-- [CAP4J Framework](tools/cap4j-framework.md) - Java平台的DDD框架
-- [开发工具推荐](tools/development-tools.md) - 提升开发效率的工具
-
-## 为什么选择DDD和Clean Architecture?
-
-### 领域驱动设计 (DDD)
-
-领域驱动设计是一种软件开发方法，它强调：
-
-- **领域专家与开发者的协作** - 建立统一语言(Ubiquitous Language)
-- **业务逻辑的核心地位** - 将业务规则作为系统的核心
-- **战略设计与战术设计** - 从宏观到微观的完整方法论
-- **应对复杂性** - 通过合理的建模来管理业务复杂度
-
-### 整洁架构 (Clean Architecture)
-
-整洁架构的核心原则包括：
-
-- **依赖倒置** - 内层不依赖外层，依赖指向内部
-- **业务逻辑独立** - 核心业务不依赖框架和技术细节
-- **可测试性** - 业务逻辑可以独立测试
-- **技术无关** - 可以轻松更换技术栈和框架
-
-## 贡献
-
-我们欢迎社区贡献！如果你发现文档中的错误或有改进建议，请：
-
-1. 访问我们的 [GitHub 仓库](https://github.com/netcorepal/clean-ddd-hub)
-2. 提交 Issue 或 Pull Request
-3. 参与讨论和分享你的经验
-
-## 联系我们
-
-- GitHub: [https://github.com/netcorepal](https://github.com/netcorepal)
-- 加入我们的社区，与其他开发者交流学习
-
----
-
-让我们一起构建更好的软件！
+不会。大部分业务系统是 I/O 密集且读多写少的场景。CleanDDD 强调聚合边界明确，不允许跨聚合直接引用和操作，会带来一定的信息冗余，从而减少跨聚合数据访问需求，反而提升整体性能。
