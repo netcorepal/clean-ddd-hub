@@ -5,12 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
-import Knowledge from "./pages/Knowledge";
-import Events from "./pages/Events";
 import NotFound from "./pages/NotFound";
-import EventDetail from "./pages/EventDetail";
-import KnowledgeDetail from "./pages/KnowledgeDetail";
-import KnowledgeCatalog from "./pages/KnowledgeCatalog";
 import Frameworks from "./pages/Frameworks";
 import { useState } from "react";
 
@@ -26,12 +21,7 @@ const App = () => {
           <Sonner />
           <Routes>
             <Route path="/" element={<Index />} />
-            <Route path="/knowledge" element={<Knowledge />} />
-            <Route path="/knowledge/catalog" element={<KnowledgeCatalog />} />
-            <Route path="/knowledge/:id" element={<KnowledgeDetail />} />
             <Route path="/frameworks" element={<Frameworks />} />
-            <Route path="/events" element={<Events />} />
-            <Route path="/events/:id" element={<EventDetail />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

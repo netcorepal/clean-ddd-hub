@@ -10,7 +10,11 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [logoError, setLogoError] = useState(false);
   const [isQrModalOpen, setIsQrModalOpen] = useState(false);
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+
+  const docsUrl = i18n.language.startsWith("en")
+    ? "https://docs.cleanddd.com/en"
+    : "https://docs.cleanddd.com/";
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -47,15 +51,12 @@ const Header = () => {
               <Link to="/" className="text-gray-700 hover:text-ddd-600 transition-all-200">
                 {t('header.home')}
               </Link>
-              <a href="https://docs.cleanddd.com/" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-ddd-600 transition-all-200">
+              <a href={docsUrl} target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-ddd-600 transition-all-200">
                 {t('header.knowledge')}
               </a>
               <Link to="/frameworks" className="text-gray-700 hover:text-ddd-600 transition-all-200">
                 {t('header.frameworks')}
               </Link>
-              {/* <Link to="/events" className="text-gray-700 hover:text-ddd-600 transition-all-200">
-                {t('header.events')}
-              </Link> */}
               <LanguageSwitcher />
               <Button variant="outline" className="ml-4" onClick={toggleQrModal}>
                 {t('header.joinCommunity')}
@@ -90,7 +91,7 @@ const Header = () => {
                 {t('header.home')}
               </Link>
               <a 
-                href="https://docs.cleanddd.com/" 
+                href={docsUrl}
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md"
@@ -104,13 +105,6 @@ const Header = () => {
                 onClick={() => setIsMenuOpen(false)}
               >
                 {t('header.frameworks')}
-              </Link>
-              <Link 
-                to="/events" 
-                className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {t('header.events')}
               </Link>
               <a 
                 href="https://github.com/netcorepal" 

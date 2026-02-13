@@ -4,7 +4,11 @@ import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
 
 const Hero = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+
+  const docsUrl = i18n.language.startsWith("en")
+    ? "https://docs.cleanddd.com/en"
+    : "https://docs.cleanddd.com/";
 
   const highlights = [
     t("home.hero.highlights.0"),
@@ -36,7 +40,7 @@ const Hero = () => {
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button asChild size="lg" className="bg-amber-400 text-slate-900 hover:bg-amber-300">
-                  <a href="https://docs.cleanddd.com/" target="_blank" rel="noopener noreferrer">
+                  <a href={docsUrl} target="_blank" rel="noopener noreferrer">
                     {t("home.hero.primaryButton")}
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </a>

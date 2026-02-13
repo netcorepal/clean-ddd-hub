@@ -4,8 +4,12 @@ import { useTranslation } from "react-i18next";
 import { useState } from "react";
 
 const Footer = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [logoError, setLogoError] = useState(false);
+
+  const docsUrl = i18n.language.startsWith("en")
+    ? "https://docs.cleanddd.com/en"
+    : "https://docs.cleanddd.com/";
   
   return (
     <footer className="bg-gray-900 text-white">
@@ -37,14 +41,9 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">{t('footer.quickLinks')}</h3>
             <ul className="space-y-3">
               <li>
-                <a href="https://docs.cleanddd.com/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-ddd-400 transition-colors">
+                <a href={docsUrl} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-ddd-400 transition-colors">
                   {t('header.knowledge')}
                 </a>
-              </li>
-              <li>
-                <Link to="/events" className="text-gray-400 hover:text-ddd-400 transition-colors">
-                  {t('header.events')}
-                </Link>
               </li>
               <li>
                 <a href="https://github.com/netcorepal" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-ddd-400 transition-colors">
