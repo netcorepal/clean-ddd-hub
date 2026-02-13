@@ -6,32 +6,21 @@ site_author: NetCorePal
 theme:
   name: material
   language: zh
+  custom_dir: docs/overrides
+  logo: assets/logo.png
   palette:
-    # Palette toggle for light mode
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: indigo
-      accent: indigo
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
-    # Palette toggle for dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: indigo
-      accent: indigo
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
+    - scheme: default
+      primary: grey
+      accent: grey
+  font:
+    text: IBM Plex Sans
+    code: JetBrains Mono
   features:
-    - navigation.tabs
     - navigation.sections
     - navigation.expand
     - navigation.top
     - search.suggest
     - search.highlight
-    - content.tabs.link
-    - content.code.annotation
     - content.code.copy
 
 markdown_extensions:
@@ -48,6 +37,9 @@ markdown_extensions:
   - attr_list
   - md_in_html
   - tables
+
+extra_css:
+  - stylesheets/engineering.css
 
 nav:
   - 首页: index.md
@@ -92,6 +84,7 @@ nav:
       - 开发工具推荐: tools/development-tools.md
 
 extra:
+  homepage: /
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/netcorepal
