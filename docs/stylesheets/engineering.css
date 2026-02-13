@@ -33,6 +33,31 @@
   color: #0b0f16;
 }
 
+.md-header__links {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+}
+
+.md-header__button--language {
+  border: 1px solid #e5e7eb;
+  border-radius: 999px;
+  padding: 4px 10px;
+  color: #0f172a;
+  background-color: #ffffff;
+  text-decoration: none;
+}
+
+.md-header__button--language:hover {
+  border-color: #cbd5f5;
+  color: #0b0f16;
+}
+
+.md-header__separator {
+  color: #94a3b8;
+}
+
 .md-sidebar--primary {
   border-right: 1px solid #e5e7eb;
 }

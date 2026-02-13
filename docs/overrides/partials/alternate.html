@@ -1,0 +1,19 @@
+{% if config.extra.alternate %}
+  <div class="md-header__option md-header__option--language">
+    <nav class="md-header__links" aria-label="Languages">
+      {% for alt in config.extra.alternate %}
+        <a
+          class="md-header__button md-header__button--language"
+          href="{{ alt.link | url }}"
+          hreflang="{{ alt.lang }}"
+          aria-label="{{ alt.name }}"
+        >
+          {{ alt.name }}
+        </a>
+        {% if not loop.last %}
+          <span class="md-header__separator">/</span>
+        {% endif %}
+      {% endfor %}
+    </nav>
+  </div>
+{% endif %}

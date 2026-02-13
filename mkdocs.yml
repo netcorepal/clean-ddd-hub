@@ -44,10 +44,12 @@ plugins:
       languages:
         - locale: zh
           name: 简体中文
+          site_name: CleanDDD 文档
           default: true
           build: true
         - locale: en
           name: English
+          site_name: CleanDDD Docs
           build: true
           nav_translations:
             什么是 CleanDDD: What is CleanDDD
