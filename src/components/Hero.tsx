@@ -45,9 +45,6 @@ const Hero = () => {
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </a>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="border-white/40 text-white hover:bg-white/10">
-                  <a href="#modeling">{t("home.hero.secondaryButton")}</a>
-                </Button>
               </div>
             </div>
 
